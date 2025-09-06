@@ -47,8 +47,7 @@
             "title": "Past event 0b",
             "description": "Doing some stuff",
             "start-time": "2025-09-06T13:00:00",
-            "end-time": "2025-09-06T15:00:00",
-            "image": "imgs/test3.jpg"
+            "end-time": "2025-09-06T15:00:00"
         },
         {
             "title": "Test event 1",
