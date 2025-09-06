@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="floating-container">
+  <div class="floating-button" aria-label="Floating Action Button">Rewards! <Icon name="fa6-solid:arrow-up-right-from-square"/></div>
+</div>
+
+<style>
+.floating-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  user-select: none;
+}
+
+.floating-button {
+  position: relative;
+  background-color: white;
+  border: 2px solid white;
+  color: rgb(255, 159, 135);
+  border-radius: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 46px; /* vertically center text */
+  overflow: visible;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.floating-button svg{
+    width: 12px;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px white;
+}
+</style>

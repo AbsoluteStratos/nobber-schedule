@@ -1,0 +1,79 @@
+{
+    "time-zone": "America/New_York",
+    "events": [
+        {
+            "title": "Past event 0",
+            "description": "Doing some stuff",
+            "start-time": "2025-09-04T11:00:00",
+            "end-time": "2025-09-05T13:00:00",
+            "image": "imgs/test.jpg"
+        },
+        {
+            "title": "Past event 0",
+            "description": "Doing some stuff",
+            "start-time": "2025-09-04T12:00:00",
+            "end-time": "2025-09-05T13:00:00",
+            "image": "imgs/test2.webp"
+        },
+        {
+            "title": "Past event 0",
+            "description": "Doing some stuff",
+            "start-time": "2025-09-04T12:00:00",
+            "end-time": "2025-09-05T13:00:00",
+            "image": "imgs/test.jpg"
+        },
+        {
+            "title": "Past event 0",
+            "description": "Doing some stuff",
+            "start-time": "2025-09-04T12:00:00",
+            "end-time": "2025-09-05T13:00:00",
+            "image": "imgs/test.jpg"
+        },
+        {
+            "title": "Past event 0",
+            "description": "Doing some stuff",
+            "start-time": "2025-09-04T12:00:00",
+            "end-time": "2025-09-05T13:00:00",
+            "image": "imgs/test.jpg"
+        },
+        {
+            "title": "Past event 0a",
+            "description": "Doing some stuff",
+            "start-time": "2025-09-06T00:00:00",
+            "end-time": "2025-09-06T13:00:00",
+            "image": "imgs/test.jpg"
+        },
+        {
+            "title": "Past event 0b",
+            "description": "Doing some stuff",
+            "start-time": "2025-09-06T13:00:00",
+            "end-time": "2025-09-06T15:00:00",
+            "image": "imgs/test3.jpg"
+        },
+        {
+            "title": "Test event 1",
+            "description": "Doing some stuff",
+            "start-time": "2025-09-12T12:00:00",
+            "end-time": "2025-09-12T13:00:00",
+            "image": "imgs/test.jpg"
+        },
+        {
+            "title": "Test event 2",
+            "description": "Doing some more stuff",
+            "start-time": "2025-09-12T13:00:00",
+            "end-time": "2025-09-12T14:00:00"
+        },
+        {
+            "title": "Test event 3",
+            "description": "Doing some more stuff",
+            "start-time": "2025-09-12T13:00:00",
+            "end-time": "2025-09-12T14:00:00"
+        },
+        {
+            "title": "Test event 4",
+            "description": "Doing some more stuff",
+            "start-time": "2025-09-12T13:00:00",
+            "end-time": "2025-09-12T14:00:00"
+        }
+    ]
+}

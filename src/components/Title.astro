@@ -1,0 +1,77 @@
+---
+import { Icon } from 'astro-icon/components'
+
+---
+
+<div class="title-container">
+  <h1>Nobbothon 2025</h1>
+
+  <nav class="social-links">
+    <a href="https://twitch.tv" target="_blank" aria-label="Twitch" class="social-link">
+      <Icon name="fa6-brands:twitch" color="white"></Icon>
+    </a>
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="social-link">
+      <Icon name="fa6-brands:youtube" color="white"></Icon>
+    </a>
+    <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="social-link">
+      <Icon name="fa6-brands:twitter" color="white"></Icon>
+    </a>
+  </nav>
+
+  <a href="https://ko-fi.com/" target="_blank" class="kofi-button">
+    Donate on Ko-fi!
+  </a>
+</div>
+
+<style>
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  gap: 1rem;
+  user-select: none;
+}
+
+.title-container h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.social-link svg {
+  width: 32px;
+  height: 32px;
+  fill: #fff !important;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.social-link:hover svg {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px #fff);
+}
+
+.kofi-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #29abe0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kofi-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fff;
+}
+</style>

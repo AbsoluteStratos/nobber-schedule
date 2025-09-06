@@ -1,0 +1,122 @@
+---
+---
+
+<div class="sidebar-container">
+  <div class="sidebar-panel" id="sidebar-panel">
+    <div id="merch-image"></div>
+    <button class="store-btn">Store ❤️</button>
+  </div>
+
+  <button class="sidebar-toggle" id="sidebar-toggle">
+    Merch
+  </button>
+</div>
+
+<script type="module">
+  const toggleBtn = document.getElementById("sidebar-toggle");
+  const panel = document.getElementById("sidebar-panel");
+
+  let open = false;
+
+  toggleBtn.addEventListener("click", () => {
+    open = !open;
+    if (open) {
+      panel.classList.add("open");
+      toggleBtn.classList.add("open");
+    } else {
+      panel.classList.remove("open");
+      toggleBtn.classList.remove("open");
+    }
+  });
+</script>
+
+<style>
+.sidebar-container {
+  position: fixed;
+  right: 0;
+  top: 25%; /* anchor vertically */
+  transform: translateY(-75%); /* shift upward so toggle stays ~75% */
+  display: flex;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+/* Panel */
+.sidebar-panel {
+  position: absolute;
+  right: -261px; /* hidden offscreen */
+  height: 400px;
+  width: 260px;
+  background: #222;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  transition: transform 0.3s linear;
+  border-radius: 0 0 0 12px;
+}
+
+.sidebar-panel.open {
+  /* right: 0px; /* leaves space for toggle button */
+  transform: translateX(-261px);
+}
+
+/* Toggle button */
+.sidebar-toggle {
+  position: relative;
+  right: 0;
+  height: 120px;
+  width: 60px;
+  background: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px 0 0 8px;
+  transition: transform 0.3s linear;
+  user-select: none;
+  z-index: 1100;
+  writing-mode: sideways-lr;
+}
+
+.sidebar-toggle:hover {
+  background: #666;
+}
+
+.sidebar-toggle.open {
+  transform: translateX(-260px); /* slide with panel */
+}
+
+/* Merch image */
+#merch-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  background-image: url("imgs/merch.webp");
+}
+
+/* Store button */
+.store-btn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.store-btn:hover {
+  background: #ff6666;
+  box-shadow: 0 0 12px #ff6666;
+}
+</style>

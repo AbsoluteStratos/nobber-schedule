@@ -1,0 +1,183 @@
+---
+import { useEffect } from 'react';
+import EventCard from "./EventCard.astro";
+import data from "../data/schedule.json";
+import DateSeparator from './DateSeparator.astro';
+import moment from "moment-timezone";
+
+interface Event {
+  title: string;
+  description: string;
+  ["start-time"]: string;
+  ["end-time"]: string;
+  image?: string;
+}
+
+// Sort events by start time
+const events: Event[] = data.events.sort(
+  (a: Event, b: Event) =>
+    new Date(a["start-time"]+"Z").getTime() - new Date(b["start-time"]+"Z").getTime()
+);
+
+// Prepare events with date separators
+const eventsWithSeparators = [];
+let lastDate = null;
+let dateCount = 1;
+let eventCount = 1;
+
+// Set up time zone / date format for day seperators
+const options = { 
+  timeZone: 'America/New_York', 
+  year: 'numeric', 
+  month: '2-digit', 
+  day: '2-digit' 
+};
+
+for (const ev of events) {
+  // const utcDate = new Date(ev["start-time"]+"Z");
+ const eventDate = moment.tz(ev["start-time"], data["time-zone"]).format("YYYY-MM-DD");
+  if (eventDate !== lastDate) {
+    eventsWithSeparators.push({ type: "separator", date: eventDate, index: dateCount});
+    dateCount += 1;
+    lastDate = eventDate;
+  }
+  eventsWithSeparators.push({ type: "event", data: ev, index: eventCount});
+  eventCount += 1;
+}
+---
+
+<div class="schedule-container" id="schedule-container">
+  <div id="timezone-info"></div>
+  {eventsWithSeparators.map(item => 
+    item.type === "separator" ? (
+      <DateSeparator date={item.date} index={item.index}/>
+    ) : (
+      <EventCard
+        title={item.data.title}
+        description={item.data.description}
+        start={moment.tz(item.data["start-time"], data["time-zone"]).toDate()}
+        end={moment.tz(item.data["end-time"], data["time-zone"]).toDate()}
+        image={item.data.image}
+        index={item.index}
+      />
+    )
+  )}
+  <div id="current-time-indicator">
+    <div class="triangle"></div>
+    <div class="line"></div>
+  </div>
+</div>
+
+<script type="module">
+
+  /* Deal with time strings */
+  const tzinfo = document.getElementById('timezone-info');
+  const zone = new Date().toLocaleTimeString('en-us',{timeZoneName:'short'}).split(' ')[2]
+  tzinfo.textContent = `Times in ${zone}`
+
+  document.querySelectorAll(".event-card").forEach(card => {
+    const start = new Date(card.dataset.startTime);
+    const end = new Date(card.dataset.endTime);
+
+    const timeEl = card.querySelector("[data-time]");
+    const dateEl = card.querySelector("[data-date]");
+    if (timeEl) {
+        timeEl.textContent =
+        `${start.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} – ` +
+        `${end.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} `;
+    }
+
+    if (dateEl) {
+        dateEl.textContent = end.toLocaleDateString([], {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        });
+    }
+    });
+
+  const container = document.getElementById('schedule-container');
+  const indicator = document.getElementById('current-time-indicator');
+
+  function updateCurrentTimeIndicator() {
+    const now = new Date();
+    const eventElements = Array.from(container.querySelectorAll('.event-card')); // assuming EventCard renders as <article>
+
+    let indicatorPos = 0;
+
+    for (let el of eventElements) {
+      const startTime = new Date(el.dataset.startTime);
+      const endTime = new Date(el.dataset.endTime);
+      console.log(startTime, endTime)
+      if (now >= startTime && now <= endTime) {
+        const progress = (now - startTime) / (endTime - startTime);
+        console.log(progress)
+        indicatorPos = el.offsetTop + el.offsetHeight * progress;
+        break;
+      } else if (now < startTime) {
+        // indicatorPos = el.offsetTop;
+        break;
+      } else {
+        indicatorPos = el.offsetTop + el.offsetHeight;
+      }
+    }
+
+    indicator.style.top = indicatorPos + 'px';
+
+    
+    // setTimeout(function () {
+    //   console.log(indicatorPos, window.innerHeight, "---")
+    //   window.scrollTo({
+    //     top: indicatorPos - window.innerHeight / 4,
+    //     behavior: 'smooth'
+    //   })
+    // }, 10);
+  }
+
+  updateCurrentTimeIndicator();
+  setInterval(updateCurrentTimeIndicator, 60000); // update every minute
+</script>
+
+<style>
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 75px;
+}
+
+#current-time-indicator {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+#current-time-indicator .line {
+  height: 4px;
+  flex: 1;
+  background: linear-gradient(to right, rgb(236, 116, 116), #f00);
+}
+
+#current-time-indicator .triangle {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid rgb(236, 116, 116);
+  margin-right: -2px;
+}
+
+#timezone-info{
+  text-align: right;
+  margin-bottom: -60px;
+  user-select: none;
+}
+</style>
