@@ -1,3 +1,6 @@
+---
+import '../styles/global.css'; // Relative path to your CSS file
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,37 +8,9 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Nobbathon 2025 - Schedule</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		width: 100%;
-		height: auto;
-		overflow: auto;
-		margin: 0;
-		min-height: 100vh;
-		background: linear-gradient(135deg, #ff8fa9, #f88781, #993030, rgb(192, 116, 103));
-		background-size: 400% 400%;
-		animation: gradientShift 12s ease infinite;
-		font-family: 'Comic Sans MS', cursive, sans-serif;
-		scroll-behavior: smooth !important;
-	}
-
-	@media (max-width: 768px) {
-		body {
-			min-height: 1100px;
-		}
-	}
-
-	@keyframes gradientShift {
-		0% { background-position: 0% 50%; }
-		50% { background-position: 100% 50%; }
-		100% { background-position: 0% 50%; }
-	}
-</style>

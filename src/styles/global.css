@@ -1,0 +1,38 @@
+
+
+
+/* Light / Darkmode defs */
+:root {
+  --background-color: #FEFBF2;
+  --background-secondary-color: #E1A39F;
+  --text-primary-color: #9e0530;
+  --text-secondary-color: #bc2646;
+  --text-thirdary-color: #bc2646;
+  --highlight-color: #ca5047;
+  --shadow-color: #E1A39F;
+  --primary-color: #FFFFFF;
+  --secondary-color: #FFEDEA;
+  --accent-color: #75558D;
+  --border-color: #E1A39F;
+}
+
+.dark-mode { /* Or [data-theme="dark"] */
+  --background-color: #5a031b;
+  --background-secondary-color: rgb(255, 196, 196);
+  --text-primary-color: #FFEDEA;
+  --text-secondary-color: #E1A39F;
+  --text-thirdary-color: #E1A39F;
+  --highlight-color: #E1A39F;
+  --shadow-color: #ca5047;
+  --primary-color: #bc2646;
+  --secondary-color: #bc2646;
+  --accent-color: #75558D;
+  --border-color: #FFEDEA;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}

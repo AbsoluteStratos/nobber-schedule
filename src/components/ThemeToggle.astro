@@ -1,0 +1,97 @@
+---
+import { Icon } from "astro-icon/components";
+
+---
+
+<button id="theme-toggle" class="theme-toggle">
+    <Icon class="moon-icon" name="fa6-solid:moon"/>
+    <Icon class="sun-icon" name="fa6-solid:sun"/>
+</button>
+
+<script is:inline>
+  const themeToggle = document.getElementById("theme-toggle");
+  const htmlElement = document.documentElement;
+
+  // Load saved theme from localStorage
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    htmlElement.classList.add(savedTheme);
+  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    htmlElement.classList.add("dark-mode");
+  } else {
+    htmlElement.classList.add("light-mode");
+  }
+
+  // Update icon visibility based on current theme
+  function updateIcons() {
+    if (htmlElement.classList.contains("dark-mode")) {
+      themeToggle.classList.add("dark");
+    } else {
+      themeToggle.classList.remove("dark");
+    }
+  }
+  updateIcons();
+
+  themeToggle.addEventListener("click", () => {
+    if (htmlElement.classList.contains("dark-mode")) {
+      htmlElement.classList.remove("dark-mode");
+      htmlElement.classList.add("light-mode");
+      localStorage.setItem("theme", "light-mode");
+    } else {
+      htmlElement.classList.remove("light-mode");
+      htmlElement.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark-mode");
+    }
+    updateIcons();
+  });
+</script>
+
+<style>
+  .theme-toggle {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background: var(--primary-color);
+    color: var(--text-primary-color);
+    border: none;
+    border-radius: 0 0 8px 8px; /* bookmark shape */
+    box-shadow: 0 2px 8px var(--shadow-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .theme-toggle .icon {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Show moon in light mode */
+  .theme-toggle:not(.dark) .moon-icon {
+     display: block;
+  }
+  .theme-toggle:not(.dark) .sun-icon {
+     display: none;
+  }
+
+  /* Show sun in dark mode */
+  .theme-toggle.dark .moon-icon {
+     display: none;
+  }
+  .theme-toggle.dark .sun-icon {
+     display: block;
+  }
+
+  /* Dark mode button background */
+  .dark-mode .theme-toggle {
+    background: #333;
+    color: white;
+  }
+</style>
