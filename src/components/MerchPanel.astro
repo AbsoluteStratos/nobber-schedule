@@ -1,9 +1,11 @@
 ---
+
+const merch_image = "imgs/merch.webp"
 ---
 
 <div class="sidebar-container">
   <div class="sidebar-panel" id="sidebar-panel">
-    <div id="merch-image"></div>
+    <div id="merch-image" style=`background-image: url('${merch_image}');`></div>
     <button class="store-btn">Store ❤️</button>
   </div>
 
@@ -100,7 +102,6 @@
   height: 100%;
   border-radius: 12px;
   object-fit: cover;
-  background-image: url("imgs/merch.webp");
 }
 
 /* Store button */
