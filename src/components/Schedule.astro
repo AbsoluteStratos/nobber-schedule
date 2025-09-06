@@ -111,8 +111,8 @@ for (const ev of events) {
       console.log(startTime, endTime)
       if (now >= startTime && now <= endTime) {
         const progress = (now - startTime) / (endTime - startTime);
-        console.log(progress)
-        indicatorPos = el.offsetTop + el.offsetHeight * progress;
+        const computedStyle = window.getComputedStyle(el);
+        indicatorPos = el.offsetTop - parseFloat(computedStyle.paddingTop) - parseFloat(computedStyle.marginTop) + (el.offsetHeight ) * progress;
         break;
       } else if (now < startTime) {
         // indicatorPos = el.offsetTop;
@@ -163,7 +163,7 @@ for (const ev of events) {
 #current-time-indicator .line {
   height: 4px;
   flex: 1;
-  background: linear-gradient(to right, rgb(236, 116, 116), #f00);
+  background: linear-gradient(to right, rgb(255, 0, 0), #f00);
 }
 
 #current-time-indicator .triangle {
@@ -171,7 +171,7 @@ for (const ev of events) {
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid rgb(236, 116, 116);
+  border-left: 15px solid rgb(255, 0, 0);
   margin-right: -2px;
 }
 
