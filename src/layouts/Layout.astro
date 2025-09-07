@@ -1,7 +1,7 @@
 ---
+import bgImg from '../assets/quilt.jpg';
+import bgImgDark from '../assets/dquilt.jpg';
 const icon_img = "nobbers.png"
-const background_img = "quilt.jpg"
-const dbackground_img = "dquilt.jpg"
 ---
 <!doctype html>
 <html lang="en">
@@ -19,7 +19,7 @@ const dbackground_img = "dquilt.jpg"
 </html>
 
 <style
-	define:vars={{ backgroundlight: `url('${background_img}')`, backgrounddark: `url('${dbackground_img}')`}}
+	define:vars={{ backgroundlight: `url('${bgImg.src}')`, backgrounddark: `url('${bgImgDark.src}')`}}
 >
 /* Light / Darkmode defs */
 :root {
