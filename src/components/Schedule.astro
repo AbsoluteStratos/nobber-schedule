@@ -5,6 +5,8 @@ import data from "../data/schedule.json";
 import DateSeparator from './DateSeparator.astro';
 import moment from "moment-timezone";
 
+import currentMarker from '../assets/marker.svg';
+
 interface Event {
   title: string;
   description: string;
@@ -62,10 +64,7 @@ for (const ev of events) {
       />
     )
   )}
-  <div id="current-time-indicator">
-    <div class="triangle"></div>
-    <div class="line"></div>
-  </div>
+  <div id="current-time-indicator"></div>
 </div>
 
 <script type="module">
@@ -111,13 +110,13 @@ for (const ev of events) {
       if (now >= startTime && now <= endTime) {
         const progress = (now - startTime) / (endTime - startTime);
         const computedStyle = window.getComputedStyle(el);
-        indicatorPos = el.offsetTop - parseFloat(computedStyle.paddingTop) - parseFloat(computedStyle.marginTop) + (el.offsetHeight ) * progress;
+        indicatorPos = el.offsetTop - parseFloat(computedStyle.paddingTop) - parseFloat(computedStyle.marginTop) + (el.offsetHeight ) * progress - indicator.offsetHeight / 2;
         break;
       } else if (now < startTime) {
         // indicatorPos = el.offsetTop;
         break;
       } else {
-        indicatorPos = el.offsetTop + el.offsetHeight;
+        indicatorPos = el.offsetTop + el.offsetHeight - indicator.offsetHeight / 2;
       }
     }
 
@@ -128,7 +127,9 @@ for (const ev of events) {
   setInterval(updateCurrentTimeIndicator, 60000); // update every minute
 </script>
 
-<style>
+<style
+  define:vars={{ marker_url: `url('${currentMarker.src}')`}}
+>
 .schedule-container {
   display: flex;
   flex-direction: column;
@@ -143,26 +144,17 @@ for (const ev of events) {
 
 #current-time-indicator {
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: -10rem;
+  width: 30rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   pointer-events: none;
-}
-
-#current-time-indicator .line {
-  height: 4px;
-  flex: 1;
-  background: linear-gradient(to right, var(--accent-color), var(--text-primary-color));
-}
-
-#current-time-indicator .triangle {
-  width: 0;
-  height: 0;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 15px solid var(--accent-color);
-  margin-right: -2px;
+  background-image: var(--marker_url);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  /* box-shadow: 0 0 8px var(--shadow-color); */
 }
 
 #timezone-info{
