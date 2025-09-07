@@ -6,7 +6,7 @@ const merch_image = "imgs/merch.webp"
 <div class="sidebar-container">
   <div class="sidebar-panel" id="sidebar-panel">
     <div id="merch-image" style=`background-image: url('${merch_image}');`></div>
-    <button class="store-btn">Store ❤️</button>
+    <button class="store-btn">Store</button>
   </div>
 
   <button class="sidebar-toggle" id="sidebar-toggle">
@@ -40,7 +40,7 @@ const merch_image = "imgs/merch.webp"
   transform: translateY(-75%); /* shift upward so toggle stays ~75% */
   display: flex;
   align-items: flex-start;
-  z-index: 1000;
+  z-index: 1100;
 }
 
 /* Panel */
@@ -49,8 +49,8 @@ const merch_image = "imgs/merch.webp"
   right: -261px; /* hidden offscreen */
   height: 400px;
   width: 260px;
-  background: #222;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.5);
+  background: var(--primary-color);
+  border: 2px solid var(--border-color);
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -69,12 +69,12 @@ const merch_image = "imgs/merch.webp"
 /* Toggle button */
 .sidebar-toggle {
   position: relative;
-  right: 0;
+  right: -2px;
   height: 120px;
-  width: 60px;
-  background: #444;
-  color: white;
-  border: none;
+  width: 62px;
+  background: var(--primary-color);
+  color: var(--text-primary-color);
+  border: 2px solid var(--border-color);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -84,12 +84,14 @@ const merch_image = "imgs/merch.webp"
   border-radius: 8px 0 0 8px;
   transition: transform 0.3s linear;
   user-select: none;
-  z-index: 1100;
+  z-index: -100;
   writing-mode: sideways-lr;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
 }
 
 .sidebar-toggle:hover {
-  background: #666;
+  background: var(--secondary-color);
 }
 
 .sidebar-toggle.open {
@@ -106,18 +108,18 @@ const merch_image = "imgs/merch.webp"
 
 /* Store button */
 .store-btn {
-  background: #ff4444;
+  background: var(--accent-color);
   color: white;
   border: none;
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
+  font-family: var(--font-family);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 .store-btn:hover {
-  background: #ff6666;
-  box-shadow: 0 0 12px #ff6666;
+  box-shadow: 0 0 12px var(--highlight-color);
 }
 </style>

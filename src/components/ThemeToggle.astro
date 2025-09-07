@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-
 ---
 
 <button id="theme-toggle" class="theme-toggle">
@@ -49,13 +48,13 @@ import { Icon } from "astro-icon/components";
 <style>
   .theme-toggle {
     position: absolute;
-    top: 0px;
+    top: -2px;
     right: 20px;
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 120px;
     background: var(--primary-color);
     color: var(--text-primary-color);
-    border: none;
+    border: 2px solid var(--border-color);
     border-radius: 0 0 8px 8px; /* bookmark shape */
     box-shadow: 0 2px 8px var(--shadow-color);
     cursor: pointer;
@@ -63,14 +62,17 @@ import { Icon } from "astro-icon/components";
     align-items: center;
     justify-content: center;
     z-index: 1100;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s, height 0.3s;
   }
 
-  .theme-toggle .icon {
-    position: absolute;
+  .theme-toggle:hover {
+    height: 130px;
+  }
+
+  .theme-toggle svg {
     font-size: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    margin-top: auto;
+    margin-bottom: 20px;
   }
 
   /* Show moon in light mode */

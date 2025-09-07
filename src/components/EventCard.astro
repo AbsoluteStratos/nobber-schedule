@@ -13,10 +13,7 @@ const { title, description, start, end, image, index } = Astro.props;
 
 <div
   class="event-card"
-  style={`
-    ${image ? `background-image: linear-gradient(to left, rgba(0,0,0,0.6), rgba(255,255,255,1.0)), url('${image}')` : ""};
-    animation-delay: ${index * 0.05}s;
-  `}
+  style={`animation-delay: ${index * 0.05}s;`}
   data-start-time={start}
   data-end-time={end}
 >
@@ -24,26 +21,25 @@ const { title, description, start, end, image, index } = Astro.props;
     <h2>{title}</h2>
     <p class="time" data-time></p>
     <p class="date" data-date></p>
-    <p>{description}</p>
+    <p class="description">{description}</p>
   </div>
+  {image && (
+    <div class="event-image" style={`background-image: url('${image}')`}></div>
+  )}
 </div>
-
-<script type="module">
-    
-</script>
 
 <style>
   .event-card {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     padding: 16px;
     border-radius: 12px;
-    border: 2px solid rgb(250, 128, 114);
-    box-shadow: 0 0 8px rgba(255, 160, 122, 0.6);
-    background-color: #fff5f5; /* fallback if no image */
+    border: 2px solid var(--border-color);
+    box-shadow: 0 0 8px var(--shadow-color);
+    background-color: var(--primary-color); /* fallback if no image */
     background-size: cover;
     background-position: center center;
-    color: rgb(60, 60, 60); /* ensure text is readable on dark overlay */
+    color: var(--text-primary-color); /* ensure text is readable on dark overlay */
     position: relative;
     /* animation */
     opacity: 0;
@@ -66,12 +62,30 @@ const { title, description, start, end, image, index } = Astro.props;
   .event-content h2 {
     margin: 0;
     font-size: 1.2rem;
-    color: rgb(72, 72, 72);
+    color: var(--text-primary-color);
   }
 
   .event-content .time {
     margin: 4px 0;
     font-weight: bold;
-    color: #7d3e4c;
+    color: var(--text-secondary-color);
+  }
+
+  .event-content .date {
+    margin: 4px 0;
+    font-size: small;
+    color: var(--text-secondary-color);
+  }
+
+  .event-content .description{
+    color: var(--text-thirdary-color);
+  }
+
+  .event-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--border-color);
+    border-radius: 12px 12px 12px 12px;
   }
 </style>

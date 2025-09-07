@@ -154,7 +154,7 @@ for (const ev of events) {
 #current-time-indicator .line {
   height: 4px;
   flex: 1;
-  background: linear-gradient(to right, rgb(255, 0, 0), #f00);
+  background: linear-gradient(to right, var(--accent-color), var(--text-primary-color));
 }
 
 #current-time-indicator .triangle {
@@ -162,7 +162,7 @@ for (const ev of events) {
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid rgb(255, 0, 0);
+  border-left: 15px solid var(--accent-color);
   margin-right: -2px;
 }
 
@@ -170,5 +170,7 @@ for (const ev of events) {
   text-align: right;
   margin-bottom: -60px;
   user-select: none;
+  color: var(--text-primary-color);
+  text-shadow: 2px 2px 4px var(--shadow-color);
 }
 </style>
