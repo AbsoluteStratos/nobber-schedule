@@ -108,7 +108,6 @@ for (const ev of events) {
     for (let el of eventElements) {
       const startTime = new Date(el.dataset.startTime);
       const endTime = new Date(el.dataset.endTime);
-      console.log(startTime, endTime)
       if (now >= startTime && now <= endTime) {
         const progress = (now - startTime) / (endTime - startTime);
         const computedStyle = window.getComputedStyle(el);

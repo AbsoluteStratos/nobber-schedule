@@ -6,7 +6,9 @@ const merch_image = "imgs/merch.webp"
 <div class="sidebar-container">
   <div class="sidebar-panel" id="sidebar-panel">
     <div id="merch-image" style=`background-image: url('${merch_image}');`></div>
-    <button class="store-btn">Store</button>
+    <a href="https://ko-fi.com/ohhnoss/shop" target="_blank" class="store-btn">
+      Store
+    </a>
   </div>
 
   <button class="sidebar-toggle" id="sidebar-toggle">
@@ -115,6 +117,8 @@ const merch_image = "imgs/merch.webp"
   font-size: 1rem;
   font-weight: bold;
   font-family: var(--font-family);
+  text-decoration: none;
+  text-align: center;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
