@@ -1,0 +1,64 @@
+{
+    "elements": [
+        {
+            "image": "parallax/star1.svg",
+            "hspace": "-30em",
+            "vspace": "20rem",
+            "size": [
+                "10rem",
+                "10rem"
+            ],
+            "zdist": 0.5
+        },
+        {
+            "image": "parallax/star2.svg",
+            "hspace": "25em",
+            "vspace": "40rem",
+            "size": [
+                "10rem",
+                "10rem"
+            ],
+            "zdist": 0.3
+        },
+        {
+            "image": "parallax/star1.svg",
+            "hspace": "40em",
+            "vspace": "70rem",
+            "size": [
+                "12rem",
+                "12rem"
+            ],
+            "zdist": 3
+        },
+        {
+            "image": "parallax/star2.svg",
+            "hspace": "-40em",
+            "vspace": "80rem",
+            "size": [
+                "20rem",
+                "20rem"
+            ],
+            "zdist": 1.5
+        },
+        {
+            "image": "parallax/star3.webp",
+            "hspace": "50em",
+            "vspace": "120rem",
+            "size": [
+                "20rem",
+                "20rem"
+            ],
+            "zdist": 3
+        },
+        {
+            "image": "parallax/star1.svg",
+            "hspace": "-55em",
+            "vspace": "100rem",
+            "size": [
+                "15rem",
+                "15rem"
+            ],
+            "zdist": 0.5
+        }
+    ]
+}
