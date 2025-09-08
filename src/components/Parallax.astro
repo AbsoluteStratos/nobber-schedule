@@ -10,17 +10,18 @@ interface ParallaxElement {
 }
 
 const elements: ParallaxElement[] = parallaxData.elements;
+
 ---
 <div class="parallax-container">
   {elements.map((el, idx) => (
     <div
       class="parallax-item"
       style={{
-        "--img": `url(${el.image})`,
         "--w": el.size[0],
         "--h": el.size[1],
         "--hspace": el.hspace,
         "--vspace": el.vspace,
+        "background-image": `url('${el.image}')`,
       }}
       data-zdist={el.zdist}
       key={idx}
@@ -86,7 +87,6 @@ const elements: ParallaxElement[] = parallaxData.elements;
   );
   width: var(--w);
   height: var(--h);
-  background-image: var(--img);
   background-size: cover;
   background-position: center;
   will-change: transform;
