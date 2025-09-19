@@ -2,13 +2,23 @@
     "elements": [
         {
             "image": "parallax/star1.svg",
-            "hspace": "-30em",
-            "vspace": "20rem",
+            "hspace": "-35em",
+            "vspace": "22rem",
             "size": [
                 "10rem",
                 "10rem"
             ],
-            "zdist": 0.5
+            "zdist": 0.8
+        },
+        {
+            "image": "parallax/star2.svg",
+            "hspace": "-40em",
+            "vspace": "30rem",
+            "size": [
+                "15rem",
+                "15rem"
+            ],
+            "zdist": 0.2
         },
         {
             "image": "parallax/star2.svg",
@@ -22,7 +32,7 @@
         },
         {
             "image": "parallax/star1.svg",
-            "hspace": "40em",
+            "hspace": "35em",
             "vspace": "70rem",
             "size": [
                 "12rem",
@@ -42,7 +52,7 @@
         },
         {
             "image": "parallax/nobbers-cloud.png",
-            "hspace": "50em",
+            "hspace": "40em",
             "vspace": "120rem",
             "size": [
                 "20rem",
