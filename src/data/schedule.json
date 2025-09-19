@@ -25,11 +25,11 @@
             "players": ["Noss fill this out"]
         },
         {
-            "title": "Piko Park 2",
-            "description": "Ender of friendships",
+            "title": "Piko Park 1",
+            "description": "Big head = Big brain",
             "start-time": "2025-09-27T16:00:00",
             "end-time": "2025-09-27T23:00:00",
-            "image": "events/pico2.jpg",
+            "image": "events/pico.jpg",
             "players": ["Noss fill this out"]
         },
         {
@@ -49,11 +49,11 @@
             "players": ["Noss fill this out"]
         },
         {
-            "title": "Piko Park 1",
-            "description": "Big head = Big brain",
+            "title": "Piko Park 2",
+            "description": "Ender of friendships",
             "start-time": "2025-09-29T18:00:00",
             "end-time": "2025-09-29T21:00:00",
-            "image": "events/pico.jpg",
+            "image": "events/pico2.jpg",
             "players": ["Noss fill this out"]
         },
         {
