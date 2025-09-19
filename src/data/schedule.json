@@ -2,77 +2,18 @@
     "time-zone": "America/New_York",
     "events": [
         {
-            "title": "Past event 0",
-            "description": "Doing some stuff",
-            "start-time": "2025-09-04T11:00:00",
-            "end-time": "2025-09-05T13:00:00",
-            "image": "events/test.jpg"
+            "title": "3D-IBI DEBUT",
+            "description": "IT'S DEBUT DAY WITH CHIBI... IN 3D!!",
+            "start-time": "2025-09-25T13:00:00",
+            "end-time": "2025-09-24T24:00:00",
+            "image": "events/CHIBI-HEAD.png"
         },
         {
-            "title": "Past event 0",
-            "description": "Doing some stuff",
-            "start-time": "2025-09-04T12:00:00",
-            "end-time": "2025-09-05T13:00:00",
+            "title": "FRIDAY",
+            "description": "It's Friday, and I have a plan.",
+            "start-time": "2025-09-26T10:00:00",
+            "end-time": "2025-09-25T24:00:00",
             "image": "events/test2.webp"
-        },
-        {
-            "title": "Past event 0",
-            "description": "Doing some stuff",
-            "start-time": "2025-09-04T12:00:00",
-            "end-time": "2025-09-05T13:00:00",
-            "image": "events/test.jpg"
-        },
-        {
-            "title": "Past event 0",
-            "description": "Doing some stuff",
-            "start-time": "2025-09-04T12:00:00",
-            "end-time": "2025-09-05T13:00:00",
-            "image": "events/test.jpg"
-        },
-        {
-            "title": "Past event 0",
-            "description": "Doing some stuff",
-            "start-time": "2025-09-04T12:00:00",
-            "end-time": "2025-09-05T13:00:00",
-            "image": "events/test.jpg"
-        },
-        {
-            "title": "Past event 0a",
-            "description": "Doing some stuff",
-            "start-time": "2025-09-06T00:00:00",
-            "end-time": "2025-09-06T13:00:00",
-            "image": "events/test.jpg"
-        },
-        {
-            "title": "Past event 0b",
-            "description": "Doing some stuff",
-            "start-time": "2025-09-06T13:00:00",
-            "end-time": "2025-09-06T15:00:00"
-        },
-        {
-            "title": "Test event 1",
-            "description": "Doing some stuff",
-            "start-time": "2025-09-12T12:00:00",
-            "end-time": "2025-09-12T13:00:00",
-            "image": "events/test.jpg"
-        },
-        {
-            "title": "Test event 2",
-            "description": "Doing some more stuff",
-            "start-time": "2025-09-12T13:00:00",
-            "end-time": "2025-09-12T14:00:00"
-        },
-        {
-            "title": "Test event 3",
-            "description": "Doing some more stuff",
-            "start-time": "2025-09-12T13:00:00",
-            "end-time": "2025-09-12T14:00:00"
-        },
-        {
-            "title": "Test event 4",
-            "description": "Doing some more stuff",
-            "start-time": "2025-09-12T13:00:00",
-            "end-time": "2025-09-12T14:00:00"
         }
     ]
 }
