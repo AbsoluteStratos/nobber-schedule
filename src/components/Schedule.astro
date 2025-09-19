@@ -101,7 +101,7 @@ for (const ev of events) {
   function updateCurrentTimeIndicator() {
     const now = new Date();
     const eventElements = Array.from(container.querySelectorAll('.event-card')); // assuming EventCard renders as <article>
-
+    console.log("Current time: " + now);
     let indicatorPos = 0;
 
     for (let el of eventElements) {
@@ -113,8 +113,8 @@ for (const ev of events) {
         indicatorPos = el.offsetTop - parseFloat(computedStyle.paddingTop) - parseFloat(computedStyle.marginTop) + (el.offsetHeight ) * progress - indicator.offsetHeight / 2;
         break;
       } else if (now < startTime) {
-        // indicatorPos = el.offsetTop;
-        indicatorPos += 10;
+        indicatorPos = el.offsetTop - 45;
+        // indicatorPos += 10;
         break;
       } else {
         indicatorPos = el.offsetTop + el.offsetHeight - indicator.offsetHeight / 2;
