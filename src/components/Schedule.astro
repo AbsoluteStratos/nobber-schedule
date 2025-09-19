@@ -114,6 +114,7 @@ for (const ev of events) {
         break;
       } else if (now < startTime) {
         // indicatorPos = el.offsetTop;
+        indicatorPos += 10;
         break;
       } else {
         indicatorPos = el.offsetTop + el.offsetHeight - indicator.offsetHeight / 2;

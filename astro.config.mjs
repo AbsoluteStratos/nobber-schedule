@@ -5,7 +5,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://absolutestratos.github.io/",
-    base: "nobber-schedule/",
+    site: "https://schedule.nobbers.tv/", 
+    // base: "nobber-schedule/",
     integrations: [react(), icon()],
 });
