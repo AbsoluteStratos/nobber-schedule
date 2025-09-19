@@ -13,6 +13,7 @@ interface Event {
   ["start-time"]: string;
   ["end-time"]: string;
   image?: string;
+  players?: string[];
 }
 
 // Sort events by start time
@@ -61,6 +62,7 @@ for (const ev of events) {
         end={moment.tz(item.data["end-time"], data["time-zone"]).toDate()}
         image={item.data.image}
         index={item.index}
+        players={item.data.players}
       />
     )
   )}

@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components'
+
 interface Props {
   title: string;
   description: string;
@@ -6,9 +8,10 @@ interface Props {
   end: string;
   image?: string;
   index: number;
+  players?: string[];
 }
 
-const { title, description, start, end, image, index } = Astro.props;
+const { title, description, start, end, image, index, players = [] } = Astro.props;
 ---
 
 <div
@@ -26,6 +29,16 @@ const { title, description, start, end, image, index } = Astro.props;
   {image && (
     <div class="event-image" style={`background-image: url('${image}')`}></div>
   )}
+
+  {players.length > 0 && (
+    <div class="players-icon">
+      <Icon name="fa6-solid:user" color="var(--text-secondary-color)"></Icon> 
+      <div class="tooltip">
+        <span class="tooltip-label">Players:</span>
+        <span class="tooltip-item">{players.join(", ")}</span>
+      </div>
+    </div>
+  )}
 </div>
 
 <style>
@@ -36,10 +49,10 @@ const { title, description, start, end, image, index } = Astro.props;
     border-radius: 12px;
     border: 2px solid var(--border-color);
     box-shadow: 0 0 8px var(--shadow-color);
-    background-color: var(--primary-color); /* fallback if no image */
+    background-color: var(--primary-color);
     background-size: cover;
     background-position: center center;
-    color: var(--text-primary-color); /* ensure text is readable on dark overlay */
+    color: var(--text-primary-color);
     position: relative;
     /* animation */
     opacity: 0;
@@ -77,7 +90,7 @@ const { title, description, start, end, image, index } = Astro.props;
     color: var(--text-secondary-color);
   }
 
-  .event-content .description{
+  .event-content .description {
     color: var(--text-thirdary-color);
   }
 
@@ -86,6 +99,50 @@ const { title, description, start, end, image, index } = Astro.props;
     background-size: cover;
     background-position: center;
     border: 2px solid var(--border-color);
-    border-radius: 12px 12px 12px 12px;
+    border-radius: 12px;
+  }
+
+  /* Players icon and tooltip */
+  .players-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    border: 2px solid var(--border-color);
+    font-size: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    right: 0;
+    background-color: var(--primary-color);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary-color);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .players-icon:hover .tooltip {
+    display: block;
+  }
+
+  .tooltip-item {
+    margin: 2px 0;
   }
 </style>
