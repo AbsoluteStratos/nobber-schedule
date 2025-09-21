@@ -15,9 +15,12 @@ import { Icon } from "astro-icon/components";
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     htmlElement.classList.add(savedTheme);
-  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    htmlElement.classList.add("dark-mode");
-  } else {
+  } 
+  // Set color based on system
+  // else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  //   htmlElement.classList.add("dark-mode");
+  // } 
+  else {
     htmlElement.classList.add("light-mode");
   }
 
