@@ -138,7 +138,7 @@
                 "15rem",
                 "15rem"
             ],
-            "zdist": 0.5
+            "zdist": 1.3
         },
         {
             "image": "parallax/star1.svg",
@@ -148,7 +148,7 @@
                 "13rem",
                 "13rem"
             ],
-            "zdist": 0.4
+            "zdist": 0.8
         },
         {
             "image": "parallax/star1.svg",
@@ -158,7 +158,7 @@
                 "8rem",
                 "8rem"
             ],
-            "zdist": 0.3
+            "zdist": 0.1
         },
         {
             "image": "parallax/star1.svg",
@@ -168,7 +168,7 @@
                 "16rem",
                 "16rem"
             ],
-            "zdist": 0.5
+            "zdist": 0.2
         },
         {
             "image": "parallax/star2.svg",
@@ -178,7 +178,7 @@
                 "20rem",
                 "20rem"
             ],
-            "zdist": 1.75
+            "zdist": 0.8
         },
         {
             "image": "parallax/sit.webp",
@@ -188,7 +188,7 @@
                 "20rem",
                 "20rem"
             ],
-            "zdist": 1.5
+            "zdist": 1.75
         }
 
     ]
