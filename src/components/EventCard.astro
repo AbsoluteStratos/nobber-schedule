@@ -23,6 +23,7 @@ const { title, description, start, end, image, index, players = [] } = Astro.pro
   <div class="event-content">
     <h2>{title}</h2>
     <p class="time" data-time></p>
+    <p class="day" data-day></p>
     <p class="date" data-date></p>
     <p class="description">{description}</p>
   </div>
@@ -81,6 +82,13 @@ const { title, description, start, end, image, index, players = [] } = Astro.pro
   .event-content .time {
     margin: 4px 0;
     font-weight: bold;
+    color: var(--text-secondary-color);
+  }
+
+  .event-content .day {
+    margin: 4px 0;
+    font-size: small;
+    font-style: italic;
     color: var(--text-secondary-color);
   }
 
