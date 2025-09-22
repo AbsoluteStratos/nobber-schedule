@@ -53,7 +53,7 @@
         {
             "image": "parallax/nobbers-cloud.png",
             "hspace": "40em",
-            "vspace": "120rem",
+            "vspace": "110rem",
             "size": [
                 "20rem",
                 "20rem"
@@ -119,6 +119,76 @@
                 "22rem"
             ],
             "zdist": 0.9
+        },
+        {
+            "image": "parallax/star2.svg",
+            "hspace": "45em",
+            "vspace": "140rem",
+            "size": [
+                "20rem",
+                "20rem"
+            ],
+            "zdist": 0.8
+        },
+        {
+            "image": "parallax/star2.svg",
+            "hspace": "45em",
+            "vspace": "180rem",
+            "size": [
+                "15rem",
+                "15rem"
+            ],
+            "zdist": 0.5
+        },
+        {
+            "image": "parallax/star1.svg",
+            "hspace": "35em",
+            "vspace": "190rem",
+            "size": [
+                "13rem",
+                "13rem"
+            ],
+            "zdist": 0.4
+        },
+        {
+            "image": "parallax/star1.svg",
+            "hspace": "42em",
+            "vspace": "200rem",
+            "size": [
+                "8rem",
+                "8rem"
+            ],
+            "zdist": 0.3
+        },
+        {
+            "image": "parallax/star1.svg",
+            "hspace": "55em",
+            "vspace": "260rem",
+            "size": [
+                "16rem",
+                "16rem"
+            ],
+            "zdist": 0.5
+        },
+        {
+            "image": "parallax/star2.svg",
+            "hspace": "35em",
+            "vspace": "300rem",
+            "size": [
+                "20rem",
+                "20rem"
+            ],
+            "zdist": 1.75
+        },
+        {
+            "image": "parallax/sit.webp",
+            "hspace": "-40em",
+            "vspace": "280rem",
+            "size": [
+                "20rem",
+                "20rem"
+            ],
+            "zdist": 1.5
         }
 
     ]
