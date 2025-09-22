@@ -171,7 +171,7 @@
             "description": "A buggy game",
             "start-time": "2025-10-10T12:00:00",
             "end-time": "2025-10-10T23:30:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "image": "events/CHIBI-HEAD.jpg"
         },
         {
             "title": "Danganronpa 2: Goodbye Despair",
@@ -186,7 +186,7 @@
             "description": "Release day, release stream!",
             "start-time": "2025-10-10T12:00:00",
             "end-time": "2025-10-10T23:30:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "image": "events/CHIBI-HEAD.jpg"
         }
     ]
 }
