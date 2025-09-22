@@ -21,7 +21,7 @@
             "description": "Chibi falls asleep with the TV on",
             "start-time": "2025-09-26T0:00:00",
             "end-time": "2025-09-26T6:00:00",
-            "image": "events/CHIBI-HEAD.jpg"
+            "image": "events/sleep.jpg"
         },
         {
             "title": "PEAK",
@@ -34,9 +34,9 @@
         {
             "title": "< Stratos > Elder Scrolls V: Skyrim (Modded)",
             "description": "Did someone say CHALLENGE RUN?",
-            "start-time": "2025-09-27T0:00:00",
-            "end-time": "2025-09-27T6:00:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "start-time": "2025-09-27T00:00:00",
+            "end-time": "2025-09-27T06:00:00",
+            "image": "events/skyrim.jpg",
             "players": ["Stratos"]
         },
         {
@@ -50,9 +50,9 @@
         {
             "title": "< Hearties & Meteor > A Way Out",
             "description": "2LIFERS went to jail... now what?",
-            "start-time": "2025-09-28T0:00:00",
-            "end-time": "2025-09-28T6:00:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "start-time": "2025-09-28T00:00:00",
+            "end-time": "2025-09-28T06:00:00",
+            "image": "events/wayout.jpg",
             "players": ["Hearties", "Meteor"]
         },
         {
@@ -74,9 +74,9 @@
         {
             "title": "< Darth > Night Stream",
             "description": "Darth is streamsitting!",
-            "start-time": "2025-09-29T0:00:00",
-            "end-time": "2025-09-29T6:00:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "start-time": "2025-09-29T00:00:00",
+            "end-time": "2025-09-29T06:00:00",
+            "image": "events/CHIBI-HEAD.png",
             "players": ["Darth"]
         },
         {
@@ -90,9 +90,9 @@
         {
             "title": "< Meteor > Night Stream",
             "description": "Meteor is streamsitting!",
-            "start-time": "2025-09-30T0:00:00",
-            "end-time": "2025-09-30T6:00:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "start-time": "2025-09-30T00:00:00",
+            "end-time": "2025-09-30T06:00:00",
+            "image": "events/CHIBI-HEAD.png",
             "players": ["Meteor"]
         },
         {
@@ -108,7 +108,7 @@
             "description": "Stupid stupid stupid!!!",
             "start-time": "2025-10-01T18:00:00",
             "end-time": "2025-10-01T23:30:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "image": "events/ronpa.jpg",
             "players": ["Noss", "Hearties", "Meteor"]
         },
         {
@@ -116,14 +116,14 @@
             "description": "It's Pieberry!! (And Black Joe)",
             "start-time": "2025-10-03T12:00:00",
             "end-time": "2025-10-03T23:30:00",
-            "image": "events/CHIBI-HEAD.jpg"
+            "image": "events/witch.jpg"
         },
         {
             "title": "< Stratos > Elder Scrolls V: Skyrim (Modded)",
             "description": "Did someone say MORE CHALLENGE RUN??",
             "start-time": "2025-10-04T00:00:00",
             "end-time": "2025-10-04T06:00:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "image": "events/skyrim.jpg",
             "players": ["Stratos"]
         },
         {
@@ -139,7 +139,7 @@
             "description": "Tune in next time...on 'A Way Out'...!",
             "start-time": "2025-10-05T00:00:00",
             "end-time": "2025-10-05T06:00:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "image": "events/wayout.jpg",
             "players": ["Hearties", "Meteor"]
         },
         {
@@ -147,7 +147,7 @@
             "description": "Darth is streamsitting!",
             "start-time": "2025-10-06T00:00:00",
             "end-time": "2025-10-06T06:00:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "image": "events/CHIBI-HEAD.png",
             "players": ["Darth"]
         },
         {
@@ -155,7 +155,7 @@
             "description": "Meteor is streamsitting!",
             "start-time": "2025-10-07T00:00:00",
             "end-time": "2025-10-07T06:00:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "image": "events/CHIBI-HEAD.png",
             "players": ["Meteor"]
         },
         {
@@ -163,7 +163,7 @@
             "description": "ALL RISE!",
             "start-time": "2025-10-09T18:00:00",
             "end-time": "2025-10-09T23:30:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "image": "events/ronpa.jpg",
             "players": ["Noss", "Hearties", "Meteor"]
         },
         {
@@ -171,14 +171,14 @@
             "description": "A buggy game",
             "start-time": "2025-10-10T12:00:00",
             "end-time": "2025-10-10T23:30:00",
-            "image": "events/CHIBI-HEAD.jpg"
+            "image": "events/skong.jpg"
         },
         {
             "title": "Danganronpa 2: Goodbye Despair",
             "description": "HOLD IT!",
             "start-time": "2025-10-15T18:00:00",
             "end-time": "2025-10-15T23:30:00",
-            "image": "events/CHIBI-HEAD.jpg",
+            "image": "events/ronpa.jpg",
             "players": ["Noss", "Hearties", "Meteor"]
         },
         {
@@ -186,7 +186,7 @@
             "description": "Release day, release stream!",
             "start-time": "2025-10-10T12:00:00",
             "end-time": "2025-10-10T23:30:00",
-            "image": "events/CHIBI-HEAD.jpg"
+            "image": "events/pokemon.jpg"
         }
     ]
 }
