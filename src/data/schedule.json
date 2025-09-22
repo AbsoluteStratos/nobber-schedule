@@ -175,7 +175,7 @@
         },
         {
             "title": "Danganronpa 2: Goodbye Despair",
-            "description": "HOLD IT!",
+            "description": "Goodbye paradise!",
             "start-time": "2025-10-15T18:00:00",
             "end-time": "2025-10-15T23:30:00",
             "image": "events/ronpa.jpg",
@@ -184,8 +184,8 @@
         {
             "title": "Pokémon Legends: Z-A",
             "description": "Release day, release stream!",
-            "start-time": "2025-10-10T12:00:00",
-            "end-time": "2025-10-10T23:30:00",
+            "start-time": "2025-10-16T12:00:00",
+            "end-time": "2025-10-16T23:30:00",
             "image": "events/pokemon.jpg"
         }
     ]
