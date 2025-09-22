@@ -121,8 +121,8 @@
         {
             "title": "< Stratos > Elder Scrolls V: Skyrim (Modded)",
             "description": "Did someone say MORE CHALLENGE RUN??",
-            "start-time": "2025-10-04T0:00:00",
-            "end-time": "2025-10-04T6:00:00",
+            "start-time": "2025-10-04T00:00:00",
+            "end-time": "2025-10-04T06:00:00",
             "image": "events/CHIBI-HEAD.jpg",
             "players": ["Stratos"]
         },
@@ -137,24 +137,24 @@
         {
             "title": "< Hearties & Meteor > A Way Out",
             "description": "Tune in next time...on 'A Way Out'...!",
-            "start-time": "2025-10-05T0:00:00",
-            "end-time": "2025-10-05T6:00:00",
+            "start-time": "2025-10-05T00:00:00",
+            "end-time": "2025-10-05T06:00:00",
             "image": "events/CHIBI-HEAD.jpg",
             "players": ["Hearties", "Meteor"]
         },
         {
             "title": "< Darth > Night Stream",
             "description": "Darth is streamsitting!",
-            "start-time": "2025-10-06T0:00:00",
-            "end-time": "2025-10-06T6:00:00",
+            "start-time": "2025-10-06T00:00:00",
+            "end-time": "2025-10-06T06:00:00",
             "image": "events/CHIBI-HEAD.jpg",
             "players": ["Darth"]
         },
         {
             "title": "< Meteor > Night Stream",
             "description": "Meteor is streamsitting!",
-            "start-time": "2025-10-07T0:00:00",
-            "end-time": "2025-10-07T6:00:00",
+            "start-time": "2025-10-07T00:00:00",
+            "end-time": "2025-10-07T06:00:00",
             "image": "events/CHIBI-HEAD.jpg",
             "players": ["Meteor"]
         },
