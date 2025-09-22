@@ -69,6 +69,57 @@
                 "15rem"
             ],
             "zdist": 0.5
+        },
+        {
+            "image": "parallax/star1.svg",
+            "hspace": "-65em",
+            "vspace": "300rem",
+            "size": [
+                "15rem",
+                "15rem"
+            ],
+            "zdist": 0.5
+        },
+        {
+            "image": "parallax/star2.svg",
+            "hspace": "-45em",
+            "vspace": "320rem",
+            "size": [
+                "10rem",
+                "10rem"
+            ],
+            "zdist": 0.4
+        },
+        {
+            "image": "parallax/star2.svg",
+            "hspace": "-48em",
+            "vspace": "250rem",
+            "size": [
+                "18rem",
+                "18rem"
+            ],
+            "zdist": 0.8
+        },
+        {
+            "image": "parallax/star1.svg",
+            "hspace": "-35em",
+            "vspace": "200rem",
+            "size": [
+                "16rem",
+                "16rem"
+            ],
+            "zdist": 0.7
+        },
+        {
+            "image": "parallax/star1.svg",
+            "hspace": "-52em",
+            "vspace": "150rem",
+            "size": [
+                "22rem",
+                "22rem"
+            ],
+            "zdist": 0.9
         }
+
     ]
 }
