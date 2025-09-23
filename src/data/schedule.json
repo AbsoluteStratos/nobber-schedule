@@ -112,6 +112,13 @@
             "players": ["Noss", "Hearties", "Meteor"]
         },
         {
+            "title": "TBD",
+            "description": "The Nobathon continues!",
+            "start-time": "2025-10-02T19:00:00",
+            "end-time": "2025-10-02T23:30:00",
+            "image": "events/CHIBI-HEAD.png"
+        },
+        {
             "title": "WitchSpring R: The Follower's Fall (Epilogue)",
             "description": "It's Pieberry!! (And Black Joe)",
             "start-time": "2025-10-03T12:00:00",
@@ -143,6 +150,13 @@
             "players": ["Hearties", "Meteor"]
         },
         {
+            "title": "TBD",
+            "description": "The Nobathon continues!",
+            "start-time": "2025-10-05T19:00:00",
+            "end-time": "2025-10-05T23:30:00",
+            "image": "events/CHIBI-HEAD.png"
+        },
+        {
             "title": "< Darth > Night Stream",
             "description": "Darth is streamsitting!",
             "start-time": "2025-10-06T00:00:00",
@@ -151,12 +165,33 @@
             "players": ["Darth"]
         },
         {
+            "title": "TBD",
+            "description": "The Nobathon continues!",
+            "start-time": "2025-10-06T19:00:00",
+            "end-time": "2025-10-06T23:30:00",
+            "image": "events/CHIBI-HEAD.png"
+        },
+        {
             "title": "< Meteor > Night Stream",
             "description": "Meteor is streamsitting!",
             "start-time": "2025-10-07T00:00:00",
             "end-time": "2025-10-07T06:00:00",
             "image": "events/CHIBI-HEAD.png",
             "players": ["Meteor"]
+        },
+        {
+            "title": "TBD",
+            "description": "The Nobathon continues!",
+            "start-time": "2025-10-07T19:00:00",
+            "end-time": "2025-10-07T23:30:00",
+            "image": "events/CHIBI-HEAD.png"
+        },
+        {
+            "title": "TBD",
+            "description": "The Nobathon continues!",
+            "start-time": "2025-10-08T19:00:00",
+            "end-time": "2025-10-08T23:30:00",
+            "image": "events/CHIBI-HEAD.png"
         },
         {
             "title": "Danganronpa 2: Goodbye Despair",
@@ -172,6 +207,34 @@
             "start-time": "2025-10-10T12:00:00",
             "end-time": "2025-10-10T23:30:00",
             "image": "events/skong.jpg"
+        },
+        {
+            "title": "Hollow Knight: Silksong",
+            "description": "Big world, small chibi",
+            "start-time": "2025-10-11T12:00:00",
+            "end-time": "2025-10-11T23:30:00",
+            "image": "events/skong.jpg"
+        },
+        {
+            "title": "TBD",
+            "description": "The Nobathon continues!",
+            "start-time": "2025-10-12T19:00:00",
+            "end-time": "2025-10-12T23:30:00",
+            "image": "events/CHIBI-HEAD.png"
+        },
+        {
+            "title": "TBD",
+            "description": "The Nobathon continues!",
+            "start-time": "2025-10-13T19:00:00",
+            "end-time": "2025-10-13T23:30:00",
+            "image": "events/CHIBI-HEAD.png"
+        },
+        {
+            "title": "TBD",
+            "description": "The Nobathon continues!",
+            "start-time": "2025-10-14T19:00:00",
+            "end-time": "2025-10-14T23:30:00",
+            "image": "events/CHIBI-HEAD.png"
         },
         {
             "title": "Danganronpa 2: Goodbye Despair",
