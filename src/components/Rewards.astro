@@ -1,36 +1,54 @@
 ---
 import { Icon } from "astro-icon/components"
 
-
 const rewards_image = "goals.png"
 ---
 
 <button class="reward-button" id="reward-button">
-    <Icon class="moon-icon" name="fa6-solid:award"/>
+  <Icon class="moon-icon" name="fa6-solid:award"/>
 </button>
 
 <div class="modal-overlay" id="modal-overlay">
-  <div class="reward-modal" id="reward-modal" style=`background-image: url('${rewards_image}');`>
+  <div class="reward-modal" id="reward-modal">
+    <img src={rewards_image} alt="Rewards" class="reward-image" />
   </div>
 </div>
-
 
 <script is:inline>
   const rewardButton = document.getElementById("reward-button");
   const modalOverlay = document.getElementById("modal-overlay");
+  const rewardModal = document.getElementById("reward-modal");
 
-  rewardButton.addEventListener("click", () => {
+  function openModal() {
     modalOverlay.classList.add("open");
+    modalOverlay.setAttribute("aria-hidden", "false");
+    rewardModal.focus();
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove("open");
+    modalOverlay.setAttribute("aria-hidden", "true");
+    rewardButton.focus();
+  }
+
+  rewardButton.addEventListener("click", openModal);
+  modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) closeModal();
   });
 
-  modalOverlay.addEventListener("click", (e) => {
-    if (e.target === modalOverlay) {
-      modalOverlay.classList.remove("open");
-    }
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalOverlay.classList.contains("open")) closeModal();
   });
 </script>
 
+
 <style>
+  :root {
+    --modal-margin: 10vh;    /* vertical margin (10% of viewport height) */
+    --modal-h-margin: 10vw;  /* horizontal margin (10% of viewport width) */
+    --modal-padding: 12px;
+  }
+  
   .reward-button {
     position: absolute;
     top: -2px;
@@ -40,7 +58,7 @@ const rewards_image = "goals.png"
     background: var(--primary-color);
     color: var(--text-primary-color);
     border: 2px solid var(--border-color);
-    border-radius: 0 0 8px 8px; /* bookmark shape */
+    border-radius: 0 0 8px 8px;
     box-shadow: 0 2px 8px var(--shadow-color);
     cursor: pointer;
     display: flex;
@@ -52,8 +70,11 @@ const rewards_image = "goals.png"
   }
 
   @media (max-height: 900px) {
-    .reward-button{
-        height: 80px;
+    .reward-button {
+      height: 80px;
+    }
+    .reward-button:hover {
+      height: 90px;
     }
   }
 
@@ -68,36 +89,45 @@ const rewards_image = "goals.png"
     margin-bottom: 15px;
   }
 
-    /* Modal panel */
-   .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-    }
+  /* Modal overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
 
   .modal-overlay.open {
     display: flex;
   }
 
-  /* Center modal */
+  /* Modal container */
   .reward-modal {
     border-radius: 12px;
-    padding: 24px;
-    width: 40em;
-    height: 50em;
-    max-width: 90%;
-    background-size: cover;
-    background-repeat:   no-repeat;
-    background-position: center center; 
+    padding: 0;
     box-shadow: 0 4px 20px var(--shadow-color);
     animation: scaleIn 0.3s ease forwards;
+    max-width: calc(100vw - (2 * var(--modal-h-margin)));
+    max-height: calc(100vh - (2 * var(--modal-margin)));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    overflow: hidden;
+  }
+
+  /* Image inside modal */
+  .reward-image {
+    max-width: calc(100vw - (2 * var(--modal-h-margin)));
+    max-height: calc(100vh - (2 * var(--modal-margin)));
+    object-fit: cover; /* keep aspect ratio */
+    border-radius: 12px;
   }
 
   @keyframes scaleIn {
