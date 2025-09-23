@@ -152,4 +152,19 @@ const { title, description, start, end, image, index, players = [] } = Astro.pro
   .tooltip-item {
     margin: 2px 0;
   }
+
+  @media (max-width: 500px) {
+    .tooltip{
+      max-width: 200px;
+      overflow-wrap: break-word; 
+    }
+
+    .tooltip-item{
+      display: block;
+      overflow-wrap: break-word;
+      white-space: pre-line; 
+    }
+  }
+
+  
 </style>
