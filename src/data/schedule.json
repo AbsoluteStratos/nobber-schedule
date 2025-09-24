@@ -76,7 +76,7 @@
             "description": "Darth is streamsitting!",
             "start-time": "2025-09-29T00:00:00",
             "end-time": "2025-09-29T06:00:00",
-            "image": "events/CHIBI-HEAD.png",
+            "image": "events/darth.png",
             "players": ["Darth"]
         },
         {
@@ -92,7 +92,7 @@
             "description": "Meteor is streamsitting!",
             "start-time": "2025-09-30T00:00:00",
             "end-time": "2025-09-30T06:00:00",
-            "image": "events/CHIBI-HEAD.png",
+            "image": "events/meteor.png",
             "players": ["Meteor"]
         },
         {
@@ -161,7 +161,7 @@
             "description": "Darth is streamsitting!",
             "start-time": "2025-10-06T00:00:00",
             "end-time": "2025-10-06T06:00:00",
-            "image": "events/CHIBI-HEAD.png",
+            "image": "events/darth.png",
             "players": ["Darth"]
         },
         {
@@ -176,7 +176,7 @@
             "description": "Meteor is streamsitting!",
             "start-time": "2025-10-07T00:00:00",
             "end-time": "2025-10-07T06:00:00",
-            "image": "events/CHIBI-HEAD.png",
+            "image": "events/meteor.png",
             "players": ["Meteor"]
         },
         {
