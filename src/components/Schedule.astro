@@ -119,7 +119,7 @@ for (const ev of events) {
       if (now >= startTime && now <= endTime) {
         const progress = (now - startTime) / (endTime - startTime);
         const computedStyle = window.getComputedStyle(el);
-        indicatorPos = el.offsetTop - parseFloat(computedStyle.paddingTop) - parseFloat(computedStyle.marginTop) + (el.offsetHeight - 40) * progress - indicator.offsetHeight / 2 + 20;
+        indicatorPos = el.offsetTop - parseFloat(computedStyle.paddingTop) - parseFloat(computedStyle.marginTop) + (el.offsetHeight - 20) * progress - indicator.offsetHeight / 2 + 20;
         break;
       } else if (now < startTime) {
         indicatorPos = el.offsetTop - 45;
