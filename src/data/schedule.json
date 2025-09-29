@@ -172,6 +172,14 @@
             "image": "events/3dibi-head.jpg"
         },
         {
+            "title": "Piko Park 2",
+            "description": "Ender of friendships (go again)",
+            "start-time": "2025-10-06T18:00:00",
+            "end-time": "2025-10-06T21:00:00",
+            "image": "events/pico2.jpg",
+            "players": ["Noss", "Hearties", "Meteor", "Darth", "Stratos", "Fell", "Mega", "Plasma"]
+        },
+        {
             "title": "< Meteor > Night Stream",
             "description": "Meteor is streamsitting!",
             "start-time": "2025-10-07T00:00:00",
