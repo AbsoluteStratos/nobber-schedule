@@ -166,7 +166,7 @@
         },
         {
             "title": "Piko Park 2 FINALE",
-            "description": "Change the roster!",
+            "description": "8 player finish",
             "start-time": "2025-10-06T18:00:00",
             "end-time": "2025-10-06T21:00:00",
             "image": "events/pico2.jpg",
@@ -182,7 +182,7 @@
         },
         {
             "title": "Sudoku",
-            "description": "The Nobathon continues!",
+            "description": "Sponsor stream",
             "start-time": "2025-10-07T19:00:00",
             "end-time": "2025-10-07T23:30:00",
             "image": "events/3dibi-head.jpg"
@@ -212,8 +212,8 @@
         {
             "title": "< Hearties > (Solitaire) Ghost Trick",
             "description": "Hearties is streamsitting!",
-            "start-time": "2025-10-14T00:00:00",
-            "end-time": "2025-10-14T06:00:00",
+            "start-time": "2025-10-11T00:00:00",
+            "end-time": "2025-10-11T06:00:00",
             "image": "events/meteor.png",
             "players": ["Hearties"]
         },
@@ -279,8 +279,8 @@
         {
             "title": "< Mega > Night Stream",
             "description": "Mega is streamsitting!",
-            "start-time": "2025-10-17T19:00:00",
-            "end-time": "2025-10-17T23:30:00",
+            "start-time": "2025-10-17T00:00:00",
+            "end-time": "2025-10-17T06:00:00",
             "image": "events/3dibi-head.jpg"
         },
         {
