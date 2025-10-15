@@ -229,7 +229,7 @@
             "description": "Those DAMN Chaos Emeralds",
             "start-time": "2025-10-12T00:00:00",
             "end-time": "2025-10-12T06:00:00",
-            "image": "events/wayout.jpg",
+            "image": "events/meteor.png",
             "players": ["Hearties", "Meteor"]
         },
         {
@@ -310,7 +310,7 @@
             "description": "You're not me-!",
             "start-time": "2025-10-19T00:00:00",
             "end-time": "2025-10-19T06:00:00",
-            "image": "events/wayout.jpg",
+            "image": "events/meteor.png",
             "players": ["Hearties", "Meteor"]
         },
         {
