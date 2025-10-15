@@ -262,10 +262,18 @@
             "image": "events/3dibi-head.jpg"
         },
         {
-            "title": "Danganronpa 2: Goodbye Despair",
-            "description": "Goodbye paradise!",
+            "title": "Blue Protocol",
+            "description": "New MMO",
             "start-time": "2025-10-15T18:00:00",
             "end-time": "2025-10-15T23:30:00",
+            "image": "events/3dibi-head.jpg",
+            "players": ["Noss", "Hearties", "Meteor"]
+        },
+        {
+            "title": "Danganronpa 2: Goodbye Despair",
+            "description": "Goodbye paradise!",
+            "start-time": "2025-10-16T18:00:00",
+            "end-time": "2025-10-16T23:30:00",
             "image": "events/ronpa.jpg",
             "players": ["Noss", "Hearties", "Meteor"]
         },
