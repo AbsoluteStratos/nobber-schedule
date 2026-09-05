@@ -8,7 +8,6 @@
   "merch": {
     "label": "Merch",
     "title": "The Merch Drop",
-    "image": "decorations/merch-bag.svg",
     "button-label": "Visit merch shop",
     "url": "https://ko-fi.com/ohhnoss/shop"
   },

@@ -37,7 +37,6 @@ Event times are wall-clock times in the configured IANA timezone. Luxon reads th
   "merch": {
     "label": "Merch",
     "title": "The Merch Drop",
-    "image": "decorations/merch-bag.svg",
     "button-label": "Visit merch shop",
     "url": "https://ko-fi.com/ohhnoss/shop"
   },
@@ -100,7 +99,7 @@ An open page rechecks event state once per minute. Live cards show a progress ba
 
 The merch toolbar button opens `merch.url` in a new tab. The shop icon comes from Font Awesome (`fa6-solid:shop`) via `astro-icon`. `merch.label` is the accessible name and hover label.
 
-`merch.title`, `merch.image`, and `merch.button-label` are still required by `npm run validate` even though they are not shown in the toolbar.
+`merch.title` and `merch.button-label` are still required by `npm run validate` even though they are not shown in the toolbar.
 
 Each `social-links` entry needs a `label`, an `https://` URL, and an `icon`. Built-in icons are `twitch`, `youtube`, and `bluesky`. Extra icons need SVG markup in `src/components/MerchModal.astro`.
 

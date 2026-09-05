@@ -142,7 +142,6 @@ const validateSchedule = async ({ path: schedulePath, requireSiteExtras }) => {
   requireString(schedulePath, 'merch.label', schedule.merch?.label);
   requireString(schedulePath, 'merch.title', schedule.merch?.title);
   requireString(schedulePath, 'merch.button-label', schedule.merch?.['button-label']);
-  await validateAsset(schedulePath, 'merch.image', schedule.merch?.image);
   validateUrl(schedulePath, 'merch.url', schedule.merch?.url, true);
 
   if (!Array.isArray(schedule['social-links']) || schedule['social-links'].length === 0) {
