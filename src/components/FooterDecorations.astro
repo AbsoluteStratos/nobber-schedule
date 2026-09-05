@@ -1,0 +1,46 @@
+---
+interface Decoration {
+  image: string;
+  alt: string;
+  side: string;
+  offset: string;
+  size: string;
+  duration: string;
+  delay: string;
+}
+
+interface Props {
+  message: string;
+  decorations: Decoration[];
+  linkLabel?: string;
+  linkHref?: string;
+}
+
+const { message, decorations, linkLabel, linkHref } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+const assetUrl = (path: string) => `${baseUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+---
+
+<footer class="site-footer">
+  <div class="footer-orbit" aria-hidden="true"></div>
+  {decorations.map((item, index) => (
+    <img
+      class={`floating-decoration floating-decoration--${item.side}`}
+      src={assetUrl(item.image)}
+      alt={item.alt}
+      width="160"
+      height="160"
+      loading="lazy"
+      style={`--float-offset:${item.offset};--float-size:${item.size};--float-duration:${item.duration};--float-delay:${item.delay};--float-phase:${index * 7}deg`}
+    />
+  ))}
+  <p>{message}</p>
+  <span>All times automatically shown in your local time zone.</span>
+  {linkLabel && linkHref && (
+    <a class="footer-schedule-link" href={linkHref}>
+      <span>Schedule archive</span>
+      <strong>{linkLabel}</strong>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg>
+    </a>
+  )}
+</footer>

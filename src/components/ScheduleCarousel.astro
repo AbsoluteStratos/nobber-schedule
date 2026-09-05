@@ -1,0 +1,465 @@
+---
+import 'swiper/css';
+import 'swiper/css/a11y';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+interface EventItem {
+  title: string;
+  description: string;
+  'start-time': string;
+  'end-time': string;
+  image: string;
+  players?: string[];
+}
+
+interface Props {
+  events: EventItem[];
+  timeZone: string;
+  liveUrl?: string;
+}
+
+const { events, timeZone, liveUrl = '' } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+const assetUrl = (path: string) => `${baseUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+---
+
+<section
+  class="schedule-shell"
+  data-schedule-root
+  data-events={JSON.stringify(events)}
+  data-time-zone={timeZone}
+  data-live-url={liveUrl}
+  aria-labelledby="schedule-heading"
+>
+  <div class="schedule-meta">
+    <div>
+      <h2 class="section-kicker" id="schedule-heading">Broadcast schedule</h2>
+    </div>
+    <div class="schedule-controls">
+      <div class="live-clock" aria-label="Current time in your time zone">
+        <span class="clock-dot" aria-hidden="true"></span>
+        <span data-clock>Loading local time…</span>
+      </div>
+      <div class="view-switch" role="group" aria-label="Schedule view">
+        <button type="button" class="view-switch-button is-selected" data-view-button="carousel" aria-pressed="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h5v10H3zM10 4h8v16h-8zM20 7h1v10h-1z" /></svg>
+          Carousel
+        </button>
+        <button type="button" class="view-switch-button" data-view-button="overview" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v4H4zM14 15h6v4h-6z" /></svg>
+          Full schedule
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div data-carousel-view>
+    <div class="carousel-stage">
+      <div class="swiper schedule-swiper">
+        <div class="swiper-wrapper">
+          {events.map((event, index) => (
+            <div
+              class="swiper-slide event-slide"
+              data-event-index={index}
+              data-start={event['start-time']}
+              data-end={event['end-time']}
+            >
+              <article class="event-card" tabindex="0">
+                <div
+                  class="live-progress live-progress--card"
+                  data-event-progress
+                  role="progressbar"
+                  aria-label={`${event.title} progress`}
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  hidden
+                >
+                  <span class="live-progress-track" aria-hidden="true">
+                    <span class="live-progress-fill" data-progress-fill></span>
+                  </span>
+                  <span class="live-progress-label" data-progress-label>0%</span>
+                </div>
+                <div class="event-image-wrap">
+                  <img
+                    class="event-image"
+                    src={assetUrl(event.image)}
+                    alt=""
+                    loading={index < 2 ? 'eager' : 'lazy'}
+                    width="900"
+                    height="560"
+                  />
+                  <a class="event-state" data-event-state>Upcoming</a>
+                </div>
+
+                <div class="event-body">
+                  <div class="event-time-row">
+                    <time data-event-time>Schedule time</time>
+                    {event.players?.length && (
+                      <button
+                        class="players-button"
+                        type="button"
+                        aria-label={`${event.players.length} players: ${event.players.join(', ')}`}
+                      >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M8.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm7-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 19.2C2 15.8 4.8 13 8.3 13h.4c3.5 0 6.3 2.8 6.3 6.2 0 .4-.4.8-.8.8H2.8a.8.8 0 0 1-.8-.8Zm13.1-5.6a6.9 6.9 0 0 1 1.8 4.7c0 .6-.1 1.2-.4 1.7h4.7c.4 0 .8-.4.8-.8 0-3-2.4-5.5-5.5-5.5-.5 0-1 0-1.4-.1Z" />
+                        </svg>
+                        <span>{event.players.length}</span>
+                        <span class="players-tooltip" role="tooltip">
+                          <strong>Playing</strong>
+                          {event.players.join(' · ')}
+                        </span>
+                      </button>
+                    )}
+                  </div>
+                  <h3>{event.title}</h3>
+                  <p>{event.description}</p>
+                </div>
+              </article>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous event">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 5-7 7 7 7" /></svg>
+      </button>
+      <button class="carousel-arrow carousel-next" type="button" aria-label="Next event">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 5 7 7-7 7" /></svg>
+      </button>
+    </div>
+
+    <div class="carousel-footer">
+      <div class="swiper-pagination"></div>
+      <p class="swipe-hint"><span aria-hidden="true">↔</span> Drag, swipe, or use arrow keys</p>
+      <button class="jump-current" type="button" data-jump-current>
+        Jump to current
+      </button>
+    </div>
+  </div>
+
+  <div class="schedule-overview" data-overview-view hidden>
+    <div class="overview-rail" aria-hidden="true"></div>
+    <ol class="overview-list">
+      {events.map((event, index) => (
+        <li
+          class="overview-event"
+          data-overview-event={index}
+          data-start={event['start-time']}
+          data-end={event['end-time']}
+        >
+          <div
+            class="live-progress live-progress--overview"
+            data-event-progress
+            role="progressbar"
+            aria-label={`${event.title} progress`}
+            aria-valuemin="0"
+            aria-valuemax="100"
+            hidden
+          >
+            <span class="live-progress-track" aria-hidden="true">
+              <span class="live-progress-fill" data-progress-fill></span>
+            </span>
+            <span class="live-progress-label" data-progress-label>0%</span>
+          </div>
+          <div class="overview-time">
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <time data-overview-time>Schedule time</time>
+          </div>
+          <img src={assetUrl(event.image)} alt="" loading="lazy" width="180" height="112" />
+          <div class="overview-copy">
+            <div class="overview-title-row">
+              <h3>{event.title}</h3>
+              <a class="overview-state" data-overview-state>Upcoming</a>
+            </div>
+            <p>{event.description}</p>
+            {event.players?.length && (
+              <p class="overview-players">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm7-1a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 19.2C2 15.8 4.8 13 8.3 13h.4c3.5 0 6.3 2.8 6.3 6.2 0 .4-.4.8-.8.8H2.8a.8.8 0 0 1-.8-.8Zm13.1-5.6a6.9 6.9 0 0 1 1.8 4.7c0 .6-.1 1.2-.4 1.7h4.7c.4 0 .8-.4.8-.8 0-3-2.4-5.5-5.5-5.5-.5 0-1 0-1.4-.1Z" />
+                </svg>
+                {event.players.join(' · ')}
+              </p>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+
+  <p class="sr-only" aria-live="polite" data-carousel-status></p>
+  <div class="cloud-horizon" aria-hidden="true"></div>
+</section>
+
+<script>
+  import { DateTime } from 'luxon';
+  import Swiper from 'swiper';
+  import { A11y, EffectCoverflow, Keyboard, Navigation, Pagination } from 'swiper/modules';
+
+  const root = document.querySelector<HTMLElement>('[data-schedule-root]');
+
+  if (root) {
+    const events = JSON.parse(root.dataset.events ?? '[]') as Array<{
+      title: string;
+      'start-time': string;
+      'end-time': string;
+    }>;
+    type EventState = 'live' | 'past' | 'upcoming';
+
+    const timeZone = root.dataset.timeZone ?? 'UTC';
+    const liveUrl = root.dataset.liveUrl ?? '';
+    const viewerTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || timeZone;
+    const slides = Array.from(root.querySelectorAll<HTMLElement>('[data-event-index]'));
+    const overviewItems = Array.from(root.querySelectorAll<HTMLElement>('[data-overview-event]'));
+    const carouselView = root.querySelector<HTMLElement>('[data-carousel-view]');
+    const overviewView = root.querySelector<HTMLElement>('[data-overview-view]');
+    const viewButtons = root.querySelectorAll<HTMLButtonElement>('[data-view-button]');
+    const clock = root.querySelector<HTMLElement>('[data-clock]');
+    const liveStatus = root.querySelector<HTMLElement>('[data-carousel-status]');
+    const jumpCurrent = root.querySelector<HTMLButtonElement>('[data-jump-current]');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const eventTimes = events.map((event) => ({
+      start: DateTime.fromISO(event['start-time'], { zone: timeZone }),
+      end: DateTime.fromISO(event['end-time'], { zone: timeZone }),
+    }));
+
+    const findFocusIndex = (now: DateTime) => {
+      let liveIndex = -1;
+      let upcomingIndex = -1;
+
+      eventTimes.forEach(({ start, end }, index) => {
+        if (now >= start && now < end) {
+          // Earlier starts win during overlaps; equal starts keep JSON order.
+          if (liveIndex === -1 || start < eventTimes[liveIndex].start) liveIndex = index;
+        } else if (now < start && (
+          upcomingIndex === -1
+          || start < eventTimes[upcomingIndex].start
+        )) {
+          upcomingIndex = index;
+        }
+      });
+
+      if (liveIndex !== -1) return liveIndex;
+      return upcomingIndex !== -1 ? upcomingIndex : Math.max(events.length - 1, 0);
+    };
+
+    const initialNow = DateTime.now().setZone(timeZone);
+    let trackedFocus = findFocusIndex(initialNow);
+
+    const swiper = new Swiper(root.querySelector<HTMLElement>('.schedule-swiper')!, {
+      modules: [A11y, EffectCoverflow, Keyboard, Navigation, Pagination],
+      effect: 'coverflow',
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      initialSlide: trackedFocus,
+      grabCursor: true,
+      speed: reducedMotion ? 0 : 720,
+      watchSlidesProgress: true,
+      keyboard: { enabled: true, onlyInViewport: true },
+      navigation: {
+        prevEl: root.querySelector<HTMLElement>('.carousel-prev'),
+        nextEl: root.querySelector<HTMLElement>('.carousel-next'),
+      },
+      pagination: {
+        el: root.querySelector<HTMLElement>('.swiper-pagination'),
+        clickable: true,
+        dynamicBullets: true,
+      },
+      a11y: {
+        enabled: true,
+        containerMessage: 'Event schedule carousel',
+        slideLabelMessage: '{{index}} of {{slidesLength}}',
+      },
+      coverflowEffect: {
+        rotate: 11,
+        stretch: -28,
+        depth: 190,
+        modifier: 1.15,
+        scale: 0.88,
+        slideShadows: true,
+      },
+      breakpoints: {
+        0: {
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 90,
+            modifier: 1,
+            scale: 0.94,
+            slideShadows: false,
+          },
+        },
+        720: {
+          coverflowEffect: {
+            rotate: 11,
+            stretch: -28,
+            depth: 190,
+            modifier: 1.15,
+            scale: 0.88,
+            slideShadows: true,
+          },
+        },
+      },
+      on: {
+        slideChange(instance) {
+          const event = events[instance.activeIndex];
+          if (event && liveStatus) liveStatus.textContent = `Showing ${event.title}`;
+        },
+      },
+    });
+
+    const renderTimes = () => {
+      eventTimes.forEach((eventTime, index) => {
+        const label = slides[index]?.querySelector<HTMLElement>('[data-event-time]');
+        const overviewLabel = overviewItems[index]?.querySelector<HTMLElement>('[data-overview-time]');
+        const start = eventTime.start.setZone(viewerTimeZone);
+        const end = eventTime.end.setZone(viewerTimeZone);
+        const crossesDay = start.toISODate() !== end.toISODate();
+        if (label) {
+          label.textContent = crossesDay
+            ? `${start.toFormat('ccc · h:mm a')} — ${end.toFormat('ccc · h:mm a')}`
+            : `${start.toFormat('ccc, LLL d · h:mm a')} — ${end.toFormat('h:mm a')}`;
+        }
+        if (overviewLabel) {
+          overviewLabel.textContent = crossesDay
+            ? `${start.toFormat('ccc, LLL d · h:mm a')}\n— ${end.toFormat('ccc, LLL d · h:mm a')}`
+            : `${start.toFormat('ccc, LLL d')}\n${start.toFormat('h:mm a')} — ${end.toFormat('h:mm a')}`;
+        }
+      });
+    };
+
+    const setView = (view: 'carousel' | 'overview', focusIndex?: number) => {
+      const showingOverview = view === 'overview';
+
+      if (carouselView) carouselView.hidden = showingOverview;
+      if (overviewView) overviewView.hidden = !showingOverview;
+      root.dataset.activeView = view;
+      viewButtons.forEach((button) => {
+        const selected = button.dataset.viewButton === view;
+        button.classList.toggle('is-selected', selected);
+        button.setAttribute('aria-pressed', String(selected));
+      });
+
+      if (!showingOverview) {
+        swiper.update();
+        if (focusIndex !== undefined) swiper.slideTo(focusIndex);
+      }
+
+      try {
+        window.localStorage.setItem('schedule-view', view);
+      } catch {
+        // The view switch still works when storage is unavailable.
+      }
+    };
+
+    viewButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        setView(button.dataset.viewButton === 'overview' ? 'overview' : 'carousel');
+      });
+    });
+
+    let savedView: 'carousel' | 'overview' = 'carousel';
+    try {
+      if (window.localStorage.getItem('schedule-view') === 'overview') savedView = 'overview';
+    } catch {
+      // Use the default carousel view when storage is unavailable.
+    }
+    setView(savedView);
+
+    const updateClock = () => {
+      const now = DateTime.now().setZone(viewerTimeZone);
+      if (clock) clock.textContent = `${now.toFormat('ccc, LLL d · h:mm:ss a')} ${now.offsetNameShort}`;
+    };
+
+    const updateStateBadge = (badge: HTMLAnchorElement | null | undefined, state: EventState) => {
+      if (!badge) return;
+
+      badge.hidden = state === 'past';
+      badge.textContent = state === 'live' ? 'Live now' : 'Upcoming';
+
+      if (state === 'live' && liveUrl) {
+        badge.href = liveUrl;
+        badge.target = '_blank';
+        badge.rel = 'noreferrer';
+        badge.setAttribute('aria-label', 'Watch live on Twitch (opens in a new tab)');
+      } else {
+        badge.removeAttribute('href');
+        badge.removeAttribute('target');
+        badge.removeAttribute('rel');
+        badge.removeAttribute('aria-label');
+      }
+    };
+
+    const updateSchedule = () => {
+      const now = DateTime.now().setZone(timeZone);
+      eventTimes.forEach(({ start, end }, index) => {
+        const state: EventState = now >= start && now < end ? 'live' : now >= end ? 'past' : 'upcoming';
+
+        const slide = slides[index];
+        const badge = slide?.querySelector<HTMLAnchorElement>('[data-event-state]');
+        const overviewItem = overviewItems[index];
+        const overviewBadge = overviewItem?.querySelector<HTMLAnchorElement>('[data-overview-state]');
+        slide?.classList.toggle('is-now', state === 'live');
+        slide?.classList.toggle('is-past', state === 'past');
+        overviewItem?.classList.toggle('is-now', state === 'live');
+        overviewItem?.classList.toggle('is-past', state === 'past');
+        updateStateBadge(badge, state);
+        updateStateBadge(overviewBadge, state);
+
+        const elapsed = now.toMillis() - start.toMillis();
+        const duration = Math.max(end.toMillis() - start.toMillis(), 1);
+        const progress = Math.min(100, Math.max(0, elapsed / duration * 100));
+        [slide, overviewItem].forEach((container) => {
+          const progressElement = container?.querySelector<HTMLElement>('[data-event-progress]');
+          if (!progressElement) return;
+
+          progressElement.hidden = state !== 'live';
+          if (state !== 'live') return;
+
+          const roundedProgress = Math.round(progress);
+          const fill = progressElement.querySelector<HTMLElement>('[data-progress-fill]');
+          const label = progressElement.querySelector<HTMLElement>('[data-progress-label]');
+          if (fill) fill.style.width = `${progress}%`;
+          if (label) label.textContent = `${roundedProgress}%`;
+          progressElement.setAttribute('aria-valuenow', String(roundedProgress));
+          progressElement.setAttribute('aria-valuetext', `${roundedProgress}% complete`);
+        });
+      });
+
+      const nextFocus = findFocusIndex(now);
+      if (nextFocus !== trackedFocus) {
+        trackedFocus = nextFocus;
+        swiper.slideTo(nextFocus);
+      }
+    };
+
+    jumpCurrent?.addEventListener('click', () => {
+      const focusIndex = findFocusIndex(DateTime.now().setZone(timeZone));
+      trackedFocus = focusIndex;
+      swiper.slideTo(focusIndex);
+    });
+
+    renderTimes();
+    updateClock();
+    updateSchedule();
+    if (events[swiper.activeIndex] && liveStatus) {
+      liveStatus.textContent = `Showing ${events[swiper.activeIndex].title}`;
+    }
+    window.setInterval(updateClock, 1000);
+
+    const millisecondsUntilNextMinute = 60_000 - (Date.now() % 60_000) + 50;
+    window.setTimeout(() => {
+      updateSchedule();
+      window.setInterval(updateSchedule, 60_000);
+    }, millisecondsUntilNextMinute);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        updateClock();
+        updateSchedule();
+      }
+    });
+  }
+</script>

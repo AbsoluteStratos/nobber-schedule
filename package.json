@@ -1,0 +1,25 @@
+{
+  "name": "schedule-website-demo",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "validate": "node scripts/validate-schedules.mjs",
+    "build": "npm run validate && astro build",
+    "preview": "astro preview",
+    "check": "npm run validate && astro check"
+  },
+  "dependencies": {
+    "@iconify-json/fa6-solid": "^1.2.4",
+    "astro": "^7.3.1",
+    "astro-icon": "^1.2.0",
+    "luxon": "^3.7.2",
+    "swiper": "^14.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/luxon": "^3.7.5",
+    "typescript": "^6.0.3"
+  }
+}

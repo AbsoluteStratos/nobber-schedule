@@ -1,0 +1,229 @@
+{
+  "site": {
+    "eyebrow": "Fall 2026",
+    "title": "Nobathon",
+    "subtitle": "- year of rest -"
+  },
+  "time-zone": "America/New_York",
+  "merch": {
+    "label": "Merch",
+    "title": "The Merch Drop",
+    "image": "decorations/merch-bag.svg",
+    "button-label": "Visit merch shop",
+    "url": "https://ko-fi.com/ohhnoss/shop"
+  },
+  "social-links": [
+    {
+      "label": "Twitch",
+      "url": "https://www.twitch.tv/ohhnoss",
+      "icon": "twitch"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@ohnob",
+      "icon": "youtube"
+    },
+    {
+      "label": "Bluesky",
+      "url": "https://bsky.app/profile/ohhnoss.bsky.social",
+      "icon": "bluesky"
+    }
+  ],
+  "events": [
+    {
+      "title": "Test Event",
+      "description": "TODO: Delete",
+      "start-time": "2026-09-04T18:00:00",
+      "end-time": "2026-09-05T00:00:00",
+      "image": "events/unknown.svg"
+    },
+    {
+      "title": "D&D",
+      "description": "Maybe?",
+      "start-time": "2026-09-10T18:00:00",
+      "end-time": "2026-09-10T21:00:00",
+      "image": "events/unknown.svg"
+    },
+    {
+      "title": "Karaoke",
+      "description": "yay.",
+      "start-time": "2026-09-10T21:00:00",
+      "end-time": "2026-09-10T23:00:00",
+      "image": "events/karoke.webp"
+    },
+    {
+      "title": "Filler",
+      "description": "Post karaoke relaxing",
+      "start-time": "2026-09-10T23:00:00",
+      "end-time": "2026-09-11T00:00:00",
+      "image": "events/filler1.webp"
+    },
+    {
+      "title": "Darth Night Stream",
+      "description": "Darth is streamsitting!",
+      "start-time": "2026-09-11T00:00:00",
+      "end-time": "2026-09-11T04:00:00",
+      "image": "events/darth.webp",
+      "players": ["Darth"]
+    },
+    {
+      "title": "Filler",
+      "description": "Hanging out",
+      "start-time": "2026-09-11T06:00:00",
+      "end-time": "2026-09-11T17:00:00",
+      "image": "events/filler1.webp"
+    },
+    {
+      "title": "Piko Park 2",
+      "description": "The picos need parking",
+      "start-time": "2026-09-11T17:00:00",
+      "end-time": "2026-09-12T00:00:00",
+      "image": "events/pico2.jpg",
+      "players": ["Noss", "Meteor", "Hearties", "Darth", "Plasma", "Fell", "Radio", "Stratos"]
+    },
+    {
+      "title": "Stratos Stream",
+      "description": "Another year, another skyrim mod. Someone stole Chibi's sweet roll",
+      "start-time": "2026-09-12T00:00:00",
+      "end-time": "2026-09-12T04:00:00",
+      "image": "events/skyrim.jpg",
+      "players": ["Stratos"]
+    },
+    {
+      "title": "Filler",
+      "description": "TBD",
+      "start-time": "2026-09-12T06:00:00",
+      "end-time": "2026-09-12T11:00:00",
+      "image": "events/filler1.webp"
+    },
+    {
+      "title": "Silksong Multiplayer Setup",
+      "description": "Installing mods type stream",
+      "start-time": "2026-09-12T11:00:00",
+      "end-time": "2026-09-12T12:00:00",
+      "image": "events/silksong_setup.webp",
+      "players": ["Noss", "Midnight", "Lemon", "Darth", "Fell", "Stratos"]
+    },
+    {
+      "title": "Silksong Multiplayer",
+      "description": "fa-ri-doo-la-see-ma-net. do-ni-pwa-nah-vo-li-net. pi-nah-so-mi-ma-ni-set. da-na-fo-su-lo-bon!",
+      "start-time": "2026-09-12T12:00:00",
+      "end-time": "2026-09-12T20:00:00",
+      "image": "events/silksong.webp",
+      "players": ["Noss", "Midnight", "Lemon", "Darth", "Fell", "Stratos"]
+    },
+    {
+      "title": "Filler",
+      "description": "Light games until the nightstream",
+      "start-time": "2026-09-12T20:00:00",
+      "end-time": "2026-09-13T00:00:00",
+      "image": "events/filler1.webp"
+    },
+    {
+      "title": "Hearties Nightstream",
+      "description": "Hearties has the overnight.",
+      "start-time": "2026-09-13T00:00:00",
+      "end-time": "2026-09-13T06:00:00",
+      "image": "events/hearties.webp",
+      "players": ["Hearties"]
+    },
+    {
+      "title": "Filler",
+      "description": "TBD.",
+      "start-time": "2026-09-13T06:00:00",
+      "end-time": "2026-09-13T11:00:00",
+      "image": "events/filler1.webp"
+    },
+    {
+      "title": "Archipelago Setup",
+      "description": "Installing mod stream",
+      "start-time": "2026-09-13T11:00:00",
+      "end-time": "2026-09-13T12:00:00",
+      "image": "events/arch.jpg",
+      "players": ["Noss", "Meteor", "Hearties", "Midnight", "Lemon", "Darth", "Fell", "Lune", "Kigo", "Stratos"]
+    },
+    {
+      "title": "Archipelago",
+      "description": "Cross-game rando!",
+      "start-time": "2026-09-13T12:00:00",
+      "end-time": "2026-09-13T18:00:00",
+      "image": "events/arch.jpg",
+      "players": ["Noss", "Meteor", "Hearties", "Midnight", "Lemon", "Darth", "Fell", "Lune", "Kigo", "Stratos"]
+    },
+    {
+      "title": "Break",
+      "description": "Food and rest",
+      "start-time": "2026-09-13T18:00:00",
+      "end-time": "2026-09-13T19:00:00",
+      "image": "events/filler1.webp"
+    },
+    {
+      "title": "Piko Park 2",
+      "description": "Round two, friendship canceled",
+      "start-time": "2026-09-13T19:00:00",
+      "end-time": "2026-09-13T23:00:00",
+      "image": "events/pico2.jpg",
+      "players": ["Noss", "Meteor", "Hearties", "Darth", "Lune", "Fell", "Radio", "Stratos"]
+    },
+    {
+      "title": "Rune Factory",
+      "description": "Farm by day, dungeon by night",
+      "start-time": "2026-09-14T18:00:00",
+      "end-time": "2026-09-14T23:00:00",
+      "image": "events/runefactory.webp"
+    },
+    {
+      "title": "Rune Factory",
+      "description": "Farm by day, dungeon by night",
+      "start-time": "2026-09-15T18:00:00",
+      "end-time": "2026-09-15T23:00:00",
+      "image": "events/runefactory.webp"
+    },
+    {
+      "title": "Rune Factory",
+      "description": "Farm by day, dungeon by night",
+      "start-time": "2026-09-16T18:00:00",
+      "end-time": "2026-09-16T23:00:00",
+      "image": "events/runefactory.webp"
+    },
+    {
+      "title": "Rune Factory",
+      "description": "Farm by day, dungeon by night",
+      "start-time": "2026-09-17T18:00:00",
+      "end-time": "2026-09-17T23:00:00",
+      "image": "events/runefactory.webp"
+    }
+  ],
+  "footer": {
+    "message": "Nobberin Time",
+    "floating-images": [
+      {
+        "image": "decorations/star.svg",
+        "alt": "",
+        "side": "left",
+        "offset": "3%",
+        "size": "clamp(58px, 8vw, 108px)",
+        "duration": "5.5s",
+        "delay": "-1s"
+      },
+      {
+        "image": "decorations/planet.svg",
+        "alt": "",
+        "side": "right",
+        "offset": "4%",
+        "size": "clamp(92px, 12vw, 168px)",
+        "duration": "7s",
+        "delay": "-3s"
+      },
+      {
+        "image": "decorations/spark.svg",
+        "alt": "",
+        "side": "left",
+        "offset": "18%",
+        "size": "clamp(36px, 5vw, 68px)",
+        "duration": "4.5s",
+        "delay": "-2s"
+      }
+    ]
+  }
+}

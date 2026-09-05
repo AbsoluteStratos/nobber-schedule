@@ -1,0 +1,62 @@
+---
+import FooterDecorations from '../components/FooterDecorations.astro';
+import MerchModal from '../components/MerchModal.astro';
+import ScheduleCarousel from '../components/ScheduleCarousel.astro';
+import SkyScene from '../components/SkyScene.astro';
+import schedule from '../data/schedule.json';
+import '../styles/palette.css';
+import '../styles/global.css';
+
+const { site, events, footer } = schedule;
+const twitchUrl = schedule['social-links'].find((social) => social.icon === 'twitch')?.url ?? '';
+const faviconUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/icon.png`;
+const archiveUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/2025/`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="A configurable, timezone-aware event schedule." />
+    <meta name="theme-color" content="#160f13" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href={faviconUrl} />
+    <title>{site.title} — Schedule</title>
+    <script is:inline>
+      (() => {
+        try {
+          document.documentElement.dataset.theme = localStorage.getItem('schedule-theme') === 'light' ? 'light' : 'dark';
+        } catch {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="page-glow page-glow--one" aria-hidden="true"></div>
+    <div class="page-glow page-glow--two" aria-hidden="true"></div>
+    <SkyScene />
+    <div class="noise" aria-hidden="true"></div>
+    <MerchModal merch={schedule.merch} socials={schedule['social-links']} />
+
+    <main>
+      <header class="hero">
+        <p class="hero-eyebrow">{site.eyebrow}</p>
+        <h1>{site.title}</h1>
+        <p class="hero-subtitle">{site.subtitle}</p>
+      </header>
+
+      <ScheduleCarousel events={events} timeZone={schedule['time-zone']} liveUrl={twitchUrl} />
+    </main>
+
+    <FooterDecorations
+      message={footer.message}
+      decorations={footer['floating-images']}
+      linkLabel="View the 2025 schedule"
+      linkHref={archiveUrl}
+    />
+  </body>
+</html>

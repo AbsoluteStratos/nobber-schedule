@@ -1,0 +1,56 @@
+<div class="sky-scene" data-sky-scene aria-hidden="true">
+  <div class="sky-layer sky-layer--far" data-sky-depth="0.35">
+    <span class="sky-star sky-star--dot" style="--star-x:8%;--star-y:13%;--star-size:3px;--star-delay:-1.2s"></span>
+    <span class="sky-star sky-star--cross" style="--star-x:18%;--star-y:31%;--star-size:13px;--star-delay:-3.4s"></span>
+    <span class="sky-star sky-star--dot" style="--star-x:37%;--star-y:9%;--star-size:4px;--star-delay:-2.1s"></span>
+    <span class="sky-star sky-star--dot" style="--star-x:68%;--star-y:26%;--star-size:3px;--star-delay:-4.7s"></span>
+    <span class="sky-star sky-star--cross" style="--star-x:91%;--star-y:38%;--star-size:10px;--star-delay:-.7s"></span>
+  </div>
+  <div class="sky-layer sky-layer--near" data-sky-depth="0.7">
+    <span class="sky-star sky-star--cross" style="--star-x:12%;--star-y:48%;--star-size:17px;--star-delay:-2.8s"></span>
+    <span class="sky-star sky-star--dot" style="--star-x:27%;--star-y:20%;--star-size:5px;--star-delay:-4s"></span>
+    <span class="sky-star sky-star--cross" style="--star-x:53%;--star-y:37%;--star-size:12px;--star-delay:-1.6s"></span>
+    <span class="sky-star sky-star--dot" style="--star-x:76%;--star-y:43%;--star-size:5px;--star-delay:-3.1s"></span>
+    <span class="sky-star sky-star--cross" style="--star-x:96%;--star-y:18%;--star-size:15px;--star-delay:-5.2s"></span>
+  </div>
+  <div class="sky-layer sky-layer--moon" data-sky-depth="1">
+    <div class="moon-float">
+      <div class="sky-moon">
+        <span class="moon-crater moon-crater--one"></span>
+        <span class="moon-crater moon-crater--two"></span>
+        <span class="moon-crater moon-crater--three"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  document.querySelectorAll<HTMLElement>('[data-sky-scene]').forEach((scene) => {
+    const layers = Array.from(scene.querySelectorAll<HTMLElement>('[data-sky-depth]'));
+    let scrollY = window.scrollY;
+    let frame = 0;
+
+    const render = () => {
+      frame = 0;
+      if (reduceMotion.matches) return;
+
+      layers.forEach((layer) => {
+        const depth = Number(layer.dataset.skyDepth ?? 0);
+        layer.style.setProperty('--sky-shift-y', `${-Math.min(scrollY, 900) * depth * 0.018}px`);
+      });
+    };
+
+    const requestRender = () => {
+      if (!frame) frame = window.requestAnimationFrame(render);
+    };
+
+    window.addEventListener('scroll', () => {
+      scrollY = window.scrollY;
+      requestRender();
+    }, { passive: true });
+
+    requestRender();
+  });
+</script>

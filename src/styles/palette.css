@@ -1,0 +1,139 @@
+/*
+ * EVENT PALETTE
+ * Change these tokens to recolor the whole site. Components only consume the
+ * semantic variables below, so both themes can be adjusted independently.
+ */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-page: #160f13;
+  --color-page-top: #211419;
+  --color-page-mid: #120c10;
+  --color-page-bottom: #1b1116;
+  --color-text: #fff8f3;
+  --color-muted: #c5adb1;
+  --color-subtle: #91777d;
+  --color-accent: #f0838c;
+  --color-accent-warm: #f2aa87;
+  --color-accent-cool: #aa9bce;
+  --color-live: #c9e09d;
+  --color-on-accent: #3b2028;
+  --color-on-live: #2f3a21;
+
+  --color-line: rgba(255, 238, 234, 0.13);
+  --color-grid: rgba(255, 232, 226, 0.025);
+  --color-glass: rgba(255, 244, 239, 0.045);
+  --color-glass-strong: rgba(37, 22, 29, 0.78);
+  --color-card-start: rgba(57, 35, 44, 0.96);
+  --color-card-end: rgba(29, 18, 23, 0.98);
+  --color-row-start: rgba(51, 31, 40, 0.78);
+  --color-row-end: rgba(29, 18, 23, 0.88);
+  --color-row-live: rgba(58, 64, 43, 0.46);
+  --color-image-surface: #3a252d;
+  --color-tooltip: #1d1217;
+  --color-control: rgba(31, 18, 24, 0.82);
+  --color-control-hover: rgba(67, 35, 43, 0.96);
+  --color-chip: rgba(255, 244, 239, 0.075);
+  --color-chip-text: #e1cdd0;
+  --color-edge-fade: #180f14;
+  --color-footer-start: rgba(38, 22, 29, 0.28);
+  --color-footer-end: rgba(27, 17, 22, 0.9);
+  --color-moon: #fff1c9;
+  --color-moon-shadow: #d9bec1;
+  --color-moon-crater: rgba(137, 91, 105, 0.17);
+  --color-star: #ffe9dc;
+  --color-cloud: #241820;
+  --color-cloud-highlight: #3b2932;
+  --color-cloud-shadow: #0d080b;
+  --color-cloud-text: #fff8f3;
+  --color-cloud-muted: #b9a3a7;
+  --color-cloud-card: rgba(255, 255, 255, 0.055);
+  --color-cloud-line: rgba(255, 238, 234, 0.12);
+  --color-modal: #281922;
+  --color-modal-copy: #1d1217;
+  --color-backdrop: rgba(13, 7, 10, 0.78);
+  --color-shadow: rgba(0, 0, 0, 0.42);
+  --color-shadow-soft: rgba(0, 0, 0, 0.3);
+  --opacity-inactive-card: 0.42;
+  --opacity-past-row: 0.62;
+  --color-image-overlay: rgba(20, 10, 15, 0.68);
+  --color-merch-visual-1: #756996;
+  --color-merch-visual-2: #d96f7b;
+  --color-merch-visual-3: #ee9d7b;
+  --color-merch-star: #fff1b8;
+  --color-merch-tag: rgba(255, 255, 255, 0.8);
+  --color-merch-tag-text: #442832;
+
+  --color-hero-1: #fffaf6;
+  --color-hero-2: #f8d8d4;
+  --color-hero-3: #f28c94;
+  --color-hero-4: #f2b08c;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --color-page: #fffaf6;
+  --color-page-top: #fffdf9;
+  --color-page-mid: #fff4ef;
+  --color-page-bottom: #f8ede8;
+  --color-text: #3d2b34;
+  --color-muted: #75616a;
+  --color-subtle: #97818a;
+  --color-accent: #ee7f86;
+  --color-accent-warm: #f2a17f;
+  --color-accent-cool: #9e94cb;
+  --color-live: #c7dda0;
+  --color-on-accent: #3b2028;
+  --color-on-live: #2f3a21;
+
+  --color-line: rgba(104, 72, 82, 0.15);
+  --color-grid: rgba(123, 83, 95, 0.045);
+  --color-glass: rgba(255, 252, 248, 0.74);
+  --color-glass-strong: rgba(255, 252, 248, 0.88);
+  --color-card-start: rgba(255, 253, 249, 0.98);
+  --color-card-end: rgba(255, 240, 235, 0.98);
+  --color-row-start: rgba(255, 253, 249, 0.92);
+  --color-row-end: rgba(252, 237, 233, 0.95);
+  --color-row-live: rgba(225, 237, 199, 0.78);
+  --color-image-surface: #f1ddd8;
+  --color-tooltip: #fffdf9;
+  --color-control: rgba(255, 252, 248, 0.9);
+  --color-control-hover: rgba(255, 235, 230, 0.98);
+  --color-chip: rgba(110, 72, 83, 0.08);
+  --color-chip-text: #644e57;
+  --color-edge-fade: #fffaf6;
+  --color-footer-start: rgba(255, 244, 239, 0.28);
+  --color-footer-end: rgba(244, 229, 225, 0.92);
+  --color-moon: #fff1c9;
+  --color-moon-shadow: #dfc7c8;
+  --color-moon-crater: rgba(137, 91, 105, 0.15);
+  --color-star: #b17782;
+  --color-cloud: #f1e8e4;
+  --color-cloud-highlight: #fffaf6;
+  --color-cloud-shadow: #dac9c5;
+  --color-cloud-text: #3d2b34;
+  --color-cloud-muted: #78656d;
+  --color-cloud-card: rgba(255, 252, 248, 0.76);
+  --color-cloud-line: rgba(104, 72, 82, 0.15);
+  --color-modal: #fff8f4;
+  --color-modal-copy: #fffdf9;
+  --color-backdrop: rgba(61, 38, 47, 0.48);
+  --color-shadow: rgba(100, 67, 78, 0.17);
+  --color-shadow-soft: rgba(100, 67, 78, 0.11);
+  --opacity-inactive-card: 0.56;
+  --opacity-past-row: 0.78;
+  --color-image-overlay: rgba(51, 29, 39, 0.5);
+  --color-merch-visual-1: #a795ca;
+  --color-merch-visual-2: #ee7f86;
+  --color-merch-visual-3: #f2a17f;
+  --color-merch-star: #fff1b8;
+  --color-merch-tag: rgba(255, 252, 248, 0.9);
+  --color-merch-tag-text: #442832;
+
+  --color-hero-1: #8a5d6a;
+  --color-hero-2: #b06a78;
+  --color-hero-3: #d96873;
+  --color-hero-4: #e69778;
+}
