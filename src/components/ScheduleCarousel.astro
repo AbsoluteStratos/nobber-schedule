@@ -35,7 +35,7 @@ const assetUrl = (path: string) => `${baseUrl.replace(/\/$/, '')}/${path.replace
 >
   <div class="schedule-meta">
     <div>
-      <h2 class="section-kicker" id="schedule-heading">Broadcast schedule</h2>
+      <h2 class="section-kicker" id="schedule-heading">Stream schedule</h2>
     </div>
     <div class="schedule-controls">
       <div class="live-clock" aria-label="Current time in your time zone">
@@ -264,7 +264,7 @@ const assetUrl = (path: string) => `${baseUrl.replace(/\/$/, '')}/${path.replace
       },
       pagination: {
         el: root.querySelector<HTMLElement>('.swiper-pagination'),
-        clickable: true,
+        type: 'fraction',
       },
       a11y: {
         enabled: true,

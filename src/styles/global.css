@@ -716,29 +716,16 @@ main {
 .swiper-pagination {
   position: relative !important;
   inset: auto !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 280px;
-  height: auto;
+  width: auto;
   margin-inline: auto;
+  color: var(--color-subtle);
+  font-size: .68rem;
+  font-weight: 750;
+  letter-spacing: .08em;
 }
 
-.swiper-pagination-bullet {
-  width: 7px;
-  height: 7px;
-  background: var(--color-subtle);
-  opacity: .45;
-  transition: width .25s ease, opacity .25s ease, background .25s ease;
-}
-
-.swiper-pagination-bullet-active {
-  width: 24px;
-  border-radius: 99px;
-  background: linear-gradient(90deg, var(--pink), var(--peach));
-  opacity: 1;
+.swiper-pagination-current {
+  color: var(--ink);
 }
 
 .swipe-hint {
