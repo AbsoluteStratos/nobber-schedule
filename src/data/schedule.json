@@ -30,10 +30,17 @@
   ],
   "events": [
     {
+      "title": "Past Test Event",
+      "description": "TODO: Delete",
+      "start-time": "2026-09-04T12:00:00",
+      "end-time": "2026-09-04T18:00:00",
+      "image": "events/unknown.svg"
+    },
+    {
       "title": "Test Event",
       "description": "TODO: Delete",
       "start-time": "2026-09-04T18:00:00",
-      "end-time": "2026-09-05T00:00:00",
+      "end-time": "2026-09-05T02:00:00",
       "image": "events/unknown.svg"
     },
     {
