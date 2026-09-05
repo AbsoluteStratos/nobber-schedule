@@ -212,6 +212,7 @@ main {
   margin: 0;
   max-width: 100%;
   font-family: "DynaPuff", "Comic Sans MS", "Comic Sans", cursive;
+  font-size: clamp(2.1rem, 11.2vw, 9.8rem);
   font-size: clamp(2.1rem, 11.2cqi, 9.8rem);
   font-weight: 700;
   line-height: 0.9;
@@ -1263,6 +1264,7 @@ main {
   }
 
   .hero h1 {
+    font-size: clamp(2rem, 11.5vw, 4.6rem);
     font-size: clamp(2rem, 12.4cqi, 4.6rem);
     letter-spacing: -0.055em;
   }
@@ -1445,7 +1447,10 @@ main {
 }
 
 @media (max-width: 430px) {
-  .hero h1 { font-size: clamp(1.85rem, 12.6cqi, 3.4rem); }
+  .hero h1 {
+    font-size: clamp(1.85rem, 11.8vw, 3.4rem);
+    font-size: clamp(1.85rem, 12.6cqi, 3.4rem);
+  }
   .event-time-row time { max-width: 220px; line-height: 1.4; }
 
   .cloud-horizon { height: 150px; }
