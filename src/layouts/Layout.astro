@@ -4,6 +4,7 @@ import bgImgDark from '../assets/dquilt.jpg';
 const icon_img = "nobbers.png"
 const pageUrl = new URL(import.meta.env.BASE_URL, Astro.site).href;
 const embedUrl = new URL("embed.jpg", pageUrl).href;
+const cssAssetUrl = (src) => `url('./${src.split("/").pop()}')`;
 ---
 <!doctype html>
 <html lang="en">
@@ -57,7 +58,7 @@ const embedUrl = new URL("embed.jpg", pageUrl).href;
 </script> -->
 
 <style
-	define:vars={{ backgroundlight: `url('${bgImg.src}')`, backgrounddark: `url('${bgImgDark.src}')`}}
+	define:vars={{ backgroundlight: cssAssetUrl(bgImg.src), backgrounddark: cssAssetUrl(bgImgDark.src)}}
 >
 /* Light / Darkmode defs */
 :root {

@@ -138,7 +138,7 @@ for (const ev of events) {
 </script>
 
 <style
-  define:vars={{ marker_url: `url('${currentMarker.src}')`}}
+  define:vars={{ marker_url: `url('./${currentMarker.src.split("/").pop()}')`}}
 >
 .schedule-container {
   display: flex;
