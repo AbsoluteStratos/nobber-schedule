@@ -11,6 +11,7 @@ const { site, events, footer } = schedule;
 const twitchUrl = schedule['social-links'].find((social) => social.icon === 'twitch')?.url ?? '';
 const faviconUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/icon.png`;
 const archiveUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/2025/`;
+const chibiUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/decorations/chibi_sleep.webp`;
 ---
 
 <!doctype html>
@@ -46,7 +47,19 @@ const archiveUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/2025/`;
     <main>
       <header class="hero">
         <p class="hero-eyebrow">{site.eyebrow}</p>
-        <h1>{site.title}</h1>
+        <div class="hero-wordmark">
+          <div class="chibi-float" aria-hidden="true">
+            <img class="sky-chibi" src={chibiUrl} alt="" width="512" height="320" />
+          </div>
+          <h1>{site.title}</h1>
+          <div class="moon-float" aria-hidden="true">
+            <div class="sky-moon">
+              <span class="moon-crater moon-crater--one"></span>
+              <span class="moon-crater moon-crater--two"></span>
+              <span class="moon-crater moon-crater--three"></span>
+            </div>
+          </div>
+        </div>
         <p class="hero-subtitle">{site.subtitle}</p>
       </header>
 

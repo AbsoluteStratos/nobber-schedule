@@ -39,30 +39,24 @@
     {
       "title": "Test Event",
       "description": "TODO: Delete",
-      "start-time": "2026-09-04T18:00:00",
-      "end-time": "2026-09-05T02:00:00",
+      "start-time": "2026-09-05T12:00:00",
+      "end-time": "2026-09-05T18:00:00",
       "image": "events/unknown.svg"
     },
     {
-      "title": "D&D",
-      "description": "Maybe?",
+      "title": "Pokemon D&D: Elysium",
+      "description": "Episode 9 — Battle Tower",
       "start-time": "2026-09-10T18:00:00",
-      "end-time": "2026-09-10T21:00:00",
-      "image": "events/unknown.svg"
-    },
-    {
-      "title": "Karaoke",
-      "description": "yay.",
-      "start-time": "2026-09-10T21:00:00",
       "end-time": "2026-09-10T23:00:00",
-      "image": "events/karoke.webp"
+      "image": "events/dnd2.webp",
+      "players": ["Noss", "Meteor", "Hearties"]
     },
     {
       "title": "Filler",
-      "description": "Post karaoke relaxing",
+      "description": "TBD",
       "start-time": "2026-09-10T23:00:00",
       "end-time": "2026-09-11T00:00:00",
-      "image": "events/filler1.webp"
+      "image": "events/filler3.webp"
     },
     {
       "title": "Darth Night Stream",
@@ -77,10 +71,10 @@
       "description": "Hanging out",
       "start-time": "2026-09-11T06:00:00",
       "end-time": "2026-09-11T17:00:00",
-      "image": "events/filler1.webp"
+      "image": "events/filler2.webp"
     },
     {
-      "title": "Piko Park 2",
+      "title": "Pico Park 2",
       "description": "The picos need parking",
       "start-time": "2026-09-11T17:00:00",
       "end-time": "2026-09-12T00:00:00",
@@ -120,10 +114,17 @@
     },
     {
       "title": "Filler",
-      "description": "Light games until the nightstream",
+      "description": "",
       "start-time": "2026-09-12T20:00:00",
+      "end-time": "2026-09-12T21:00:00",
+      "image": "events/filler3.webp"
+    },
+    {
+      "title": "Karaoke",
+      "description": "yay",
+      "start-time": "2026-09-12T21:00:00",
       "end-time": "2026-09-13T00:00:00",
-      "image": "events/filler1.webp"
+      "image": "events/karoke.webp"
     },
     {
       "title": "Hearties Nightstream",
@@ -138,11 +139,11 @@
       "description": "TBD.",
       "start-time": "2026-09-13T06:00:00",
       "end-time": "2026-09-13T11:00:00",
-      "image": "events/filler1.webp"
+      "image": "events/filler2.webp"
     },
     {
       "title": "Archipelago Setup",
-      "description": "Installing mod stream",
+      "description": "Installing mods type stream",
       "start-time": "2026-09-13T11:00:00",
       "end-time": "2026-09-13T12:00:00",
       "image": "events/arch.jpg",
@@ -193,11 +194,19 @@
       "image": "events/runefactory.webp"
     },
     {
-      "title": "Rune Factory",
-      "description": "Farm by day, dungeon by night",
+      "title": "Filler",
+      "description": "TBD",
+      "start-time": "2026-09-17T13:00:00",
+      "end-time": "2026-09-17T18:00:00",
+      "image": "events/filler3.webp"
+    },
+    {
+      "title": "Palworld",
+      "description": "",
       "start-time": "2026-09-17T18:00:00",
       "end-time": "2026-09-17T23:00:00",
-      "image": "events/runefactory.webp"
+      "image": "events/palworld.webp",
+      "players": ["Noss", "Meteor", "Hearties"]
     }
   ],
   "footer": {
