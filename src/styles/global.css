@@ -195,6 +195,7 @@ main {
   margin: 0 auto;
   padding: clamp(52px, 8vw, 104px) 0 clamp(42px, 6vw, 72px);
   text-align: center;
+  container-type: inline-size;
 }
 
 .hero-eyebrow,
@@ -209,11 +210,12 @@ main {
 
 .hero h1 {
   margin: 0;
+  max-width: 100%;
   font-family: "DynaPuff", "Comic Sans MS", "Comic Sans", cursive;
-  font-size: clamp(4rem, 11.4vw, 9.8rem);
+  font-size: clamp(2.1rem, 11.2cqi, 9.8rem);
   font-weight: 700;
   line-height: 0.9;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.045em;
   text-transform: uppercase;
   text-wrap: balance;
   -webkit-user-select: none;
@@ -1261,7 +1263,8 @@ main {
   }
 
   .hero h1 {
-    font-size: clamp(3.5rem, 19vw, 6rem);
+    font-size: clamp(2rem, 12.4cqi, 4.6rem);
+    letter-spacing: -0.055em;
   }
 
   .schedule-meta {
@@ -1442,7 +1445,7 @@ main {
 }
 
 @media (max-width: 430px) {
-  .hero h1 { font-size: 18vw; }
+  .hero h1 { font-size: clamp(1.85rem, 12.6cqi, 3.4rem); }
   .event-time-row time { max-width: 220px; line-height: 1.4; }
 
   .cloud-horizon { height: 150px; }
