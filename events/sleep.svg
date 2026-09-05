@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Sleep stream placeholder artwork">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080e29"/><stop offset=".6" stop-color="#24184f"/><stop offset="1" stop-color="#713e82"/></linearGradient></defs><rect width="900" height="560" fill="url(#g)"/>
+  <circle cx="700" cy="115" r="80" fill="#ffe3ae"/><circle cx="735" cy="90" r="80" fill="#101034"/>
+  <g fill="#fff" opacity=".7"><circle cx="105" cy="90" r="4"/><circle cx="220" cy="150" r="7"/><circle cx="430" cy="75" r="3"/><circle cx="800" cy="290" r="6"/></g>
+  <path d="M90 390h720v170H90z" fill="#171026"/><path d="M150 335h330q80 0 150 72H150Z" fill="#df9fd0"/><path d="M150 335h150q40 0 70 72H150Z" fill="#ffe5f2"/><path d="M570 215h180v140H570z" fill="#1a122c" stroke="#7f6aa0" stroke-width="10"/><path d="M595 245h130v80H595z" fill="#84d6cb" opacity=".8"/>
+  <g fill="#ffd4ec" font-family="Arial,sans-serif" font-weight="800"><text x="360" y="190" font-size="62">Z</text><text x="420" y="140" font-size="46">Z</text><text x="470" y="103" font-size="34">Z</text></g>
+</svg>
