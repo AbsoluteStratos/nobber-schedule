@@ -7,5 +7,8 @@ import icon from "astro-icon";
 export default defineConfig({
     site: "https://schedule.nobbers.tv/",
     base: "/2025/",
+    build: {
+        assets: "assets",
+    },
     integrations: [react(), icon()],
 });

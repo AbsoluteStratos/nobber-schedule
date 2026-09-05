@@ -20,7 +20,7 @@ async function htmlFiles(dir) {
 const files = await htmlFiles(dist);
 for (const file of files) {
   const html = await readFile(file, "utf8");
-  const next = html.replaceAll("/2025/_astro/", "_astro/");
+  const next = html.replaceAll("/2025/assets/", "assets/");
   if (next !== html) {
     await writeFile(file, next);
   }
