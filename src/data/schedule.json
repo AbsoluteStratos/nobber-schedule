@@ -1,255 +1,333 @@
 {
-    "time-zone": "America/New_York",
-    "events": [
-        {
-            "title": "3D-IBI DEBUT",
-            "description": "IT'S DEBUT DAY WITH CHIBI... IN 3D!!",
-            "start-time": "2025-09-25T13:00:00",
-            "end-time": "2025-09-25T18:00:00",
-            "image": "events/CHIBI-HEAD.png"
-        },
-        {
-            "title": "Archipelago",
-            "description": "Cross-game rando!",
-            "start-time": "2025-09-25T18:00:00",
-            "end-time": "2025-09-25T23:30:00",
-            "image": "events/arch.jpg",
-            "players": ["Noss", "Meteor", "Darth", "Stratos", "Ember", "Fell", "Plasma"]
-        },
-        {
-            "title": "VRChat Sleep Stream",
-            "description": "Chibi falls asleep with the TV on",
-            "start-time": "2025-09-26T00:00:00",
-            "end-time": "2025-09-26T06:00:00",
-            "image": "events/sleep.jpg"
-        },
-        {
-            "title": "PEAK",
-            "description": "Chibi takes a flight on Bing Bong airlines",
-            "start-time": "2025-09-26T17:00:00",
-            "end-time": "2025-09-26T23:30:00",
-            "image": "events/peak.jpg",
-            "players": ["Noss", "Hearties", "Meteor", "Stratos", "Fell", "Plasma"]
-        },
-        {
-            "title": "< Stratos > Elder Scrolls V: Skyrim (Modded)",
-            "description": "Did someone say CHALLENGE RUN?",
-            "start-time": "2025-09-27T00:00:00",
-            "end-time": "2025-09-27T06:00:00",
-            "image": "events/skyrim.jpg",
-            "players": ["Stratos"]
-        },
-        {
-            "title": "Piko Park 1",
-            "description": "Big head = Big brain",
-            "start-time": "2025-09-27T16:00:00",
-            "end-time": "2025-09-27T23:30:00",
-            "image": "events/pico.jpg",
-            "players": ["Noss", "Hearties", "Darth", "Stratos", "Fell", "Mega"]
-        },
-        {
-            "title": "< Hearties & Meteor > A Way Out",
-            "description": "2LIFERS went to jail... now what?",
-            "start-time": "2025-09-28T00:00:00",
-            "end-time": "2025-09-28T06:00:00",
-            "image": "events/wayout.jpg",
-            "players": ["Hearties", "Meteor"]
-        },
-        {
-            "title": "Hollow Knight (Modded Multiplayer)",
-            "description": "Budget Silksong",
-            "start-time": "2025-09-28T12:00:00",
-            "end-time": "2025-09-28T17:00:00",
-            "image": "events/hollowknight.jpg",
-            "players": ["Noss", "Stratos", "Mega", "Fell", "Midnight", "Darth"]
-        },
-        {
-            "title": "PEAK",
-            "description": "Chibi takes (another) flight on Bing Bong airlines",
-            "start-time": "2025-09-28T17:00:00",
-            "end-time": "2025-09-28T23:30:00",
-            "image": "events/peak.jpg",
-            "players": ["Noss", "Hearties", "Midnight", "Meteor", "Darth", "Stratos", "Fell"]
-        },
-        {
-            "title": "< Darth > Night Stream",
-            "description": "Darth is streamsitting!",
-            "start-time": "2025-09-29T00:00:00",
-            "end-time": "2025-09-29T06:00:00",
-            "image": "events/darth.png",
-            "players": ["Darth"]
-        },
-        {
-            "title": "Piko Park 2",
-            "description": "Ender of friendships",
-            "start-time": "2025-09-29T18:00:00",
-            "end-time": "2025-09-29T21:00:00",
-            "image": "events/pico2.jpg",
-            "players": ["Noss", "Hearties", "Meteor", "Darth", "Stratos", "Fell", "Mega", "Plasma"]
-        },
-        {
-            "title": "< Meteor > Night Stream",
-            "description": "Meteor is streamsitting!",
-            "start-time": "2025-09-30T00:00:00",
-            "end-time": "2025-09-30T06:00:00",
-            "image": "events/meteor.png",
-            "players": ["Meteor"]
-        },
-        {
-            "title": "Raft",
-            "description": "Chibi lost at sea aboard the S.S. nobberin time",
-            "start-time": "2025-09-30T17:00:00",
-            "end-time": "2025-09-30T20:00:00",
-            "image": "events/raft.jpg",
-            "players": ["Noss", "Midnight", "Meteor", "Stratos", "Fell"]
-        },
-        {
-            "title": "Danganronpa 2: Goodbye Despair",
-            "description": "Stupid stupid stupid!!!",
-            "start-time": "2025-10-01T18:00:00",
-            "end-time": "2025-10-01T23:30:00",
-            "image": "events/ronpa.jpg",
-            "players": ["Noss", "Hearties", "Meteor"]
-        },
-        {
-            "title": "TBD",
-            "description": "The Nobathon continues!",
-            "start-time": "2025-10-02T19:00:00",
-            "end-time": "2025-10-02T23:30:00",
-            "image": "events/3dibi-head.jpg"
-        },
-        {
-            "title": "WitchSpring R: The Follower's Fall (Epilogue)",
-            "description": "It's Pieberry!! (And Black Joe)",
-            "start-time": "2025-10-03T12:00:00",
-            "end-time": "2025-10-03T23:30:00",
-            "image": "events/witch.jpg"
-        },
-        {
-            "title": "< Stratos > Elder Scrolls V: Skyrim (Modded)",
-            "description": "Did someone say MORE CHALLENGE RUN??",
-            "start-time": "2025-10-04T00:00:00",
-            "end-time": "2025-10-04T06:00:00",
-            "image": "events/skyrim.jpg",
-            "players": ["Stratos"]
-        },
-        {
-            "title": "Archipelago",
-            "description": "Cross-game rando, session 2!",
-            "start-time": "2025-10-04T16:00:00",
-            "end-time": "2025-10-04T23:30:00",
-            "image": "events/arch.jpg",
-            "players": ["Noss", "Hearties", "Midnight", "Darth", "Stratos", "Ember", "Fell", "Plasma"]
-        },
-        {
-            "title": "< Hearties & Meteor > A Way Out",
-            "description": "Tune in next time...on 'A Way Out'...!",
-            "start-time": "2025-10-05T00:00:00",
-            "end-time": "2025-10-05T06:00:00",
-            "image": "events/wayout.jpg",
-            "players": ["Hearties", "Meteor"]
-        },
-        {
-            "title": "TBD",
-            "description": "The Nobathon continues!",
-            "start-time": "2025-10-05T19:00:00",
-            "end-time": "2025-10-05T23:30:00",
-            "image": "events/3dibi-head.jpg"
-        },
-        {
-            "title": "< Darth > Night Stream",
-            "description": "Darth is streamsitting!",
-            "start-time": "2025-10-06T00:00:00",
-            "end-time": "2025-10-06T06:00:00",
-            "image": "events/darth.png",
-            "players": ["Darth"]
-        },
-        {
-            "title": "TBD",
-            "description": "The Nobathon continues!",
-            "start-time": "2025-10-06T19:00:00",
-            "end-time": "2025-10-06T23:30:00",
-            "image": "events/3dibi-head.jpg"
-        },
-        {
-            "title": "< Meteor > Night Stream",
-            "description": "Meteor is streamsitting!",
-            "start-time": "2025-10-07T00:00:00",
-            "end-time": "2025-10-07T06:00:00",
-            "image": "events/meteor.png",
-            "players": ["Meteor"]
-        },
-        {
-            "title": "TBD",
-            "description": "The Nobathon continues!",
-            "start-time": "2025-10-07T19:00:00",
-            "end-time": "2025-10-07T23:30:00",
-            "image": "events/3dibi-head.jpg"
-        },
-        {
-            "title": "TBD",
-            "description": "The Nobathon continues!",
-            "start-time": "2025-10-08T19:00:00",
-            "end-time": "2025-10-08T23:30:00",
-            "image": "events/3dibi-head.jpg"
-        },
-        {
-            "title": "Danganronpa 2: Goodbye Despair",
-            "description": "ALL RISE!",
-            "start-time": "2025-10-09T18:00:00",
-            "end-time": "2025-10-09T23:30:00",
-            "image": "events/ronpa.jpg",
-            "players": ["Noss", "Hearties", "Meteor"]
-        },
-        {
-            "title": "Hollow Knight: Silksong",
-            "description": "A buggy game",
-            "start-time": "2025-10-10T12:00:00",
-            "end-time": "2025-10-10T23:30:00",
-            "image": "events/skong.jpg"
-        },
-        {
-            "title": "Hollow Knight: Silksong",
-            "description": "Big world, small chibi",
-            "start-time": "2025-10-11T12:00:00",
-            "end-time": "2025-10-11T23:30:00",
-            "image": "events/skong.jpg"
-        },
-        {
-            "title": "TBD",
-            "description": "The Nobathon continues!",
-            "start-time": "2025-10-12T19:00:00",
-            "end-time": "2025-10-12T23:30:00",
-            "image": "events/3dibi-head.jpg"
-        },
-        {
-            "title": "TBD",
-            "description": "The Nobathon continues!",
-            "start-time": "2025-10-13T19:00:00",
-            "end-time": "2025-10-13T23:30:00",
-            "image": "events/3dibi-head.jpg"
-        },
-        {
-            "title": "TBD",
-            "description": "The Nobathon continues!",
-            "start-time": "2025-10-14T19:00:00",
-            "end-time": "2025-10-14T23:30:00",
-            "image": "events/3dibi-head.jpg"
-        },
-        {
-            "title": "Danganronpa 2: Goodbye Despair",
-            "description": "Goodbye paradise!",
-            "start-time": "2025-10-15T18:00:00",
-            "end-time": "2025-10-15T23:30:00",
-            "image": "events/ronpa.jpg",
-            "players": ["Noss", "Hearties", "Meteor"]
-        },
-        {
-            "title": "Pokémon Legends: Z-A",
-            "description": "Release day, release stream!",
-            "start-time": "2025-10-16T12:00:00",
-            "end-time": "2025-10-16T23:30:00",
-            "image": "events/pokemon.jpg"
-        }
-    ]
+  "time-zone": "America/New_York",
+  "events": [
+      {
+          "title": "3D-IBI DEBUT",
+          "description": "IT'S DEBUT DAY WITH CHIBI... IN 3D!!",
+          "start-time": "2025-09-25T13:00:00",
+          "end-time": "2025-09-25T18:00:00",
+          "image": "events/CHIBI-HEAD.png"
+      },
+      {
+          "title": "Archipelago",
+          "description": "Cross-game rando!",
+          "start-time": "2025-09-25T18:00:00",
+          "end-time": "2025-09-25T23:30:00",
+          "image": "events/arch.jpg",
+          "players": ["Noss", "Meteor", "Darth", "Stratos", "Ember", "Fell", "Plasma"]
+      },
+      {
+          "title": "VRChat Sleep Stream",
+          "description": "Chibi falls asleep with the TV on",
+          "start-time": "2025-09-26T00:00:00",
+          "end-time": "2025-09-26T06:00:00",
+          "image": "events/sleep.jpg"
+      },
+      {
+          "title": "PEAK",
+          "description": "Chibi takes a flight on Bing Bong airlines",
+          "start-time": "2025-09-26T17:00:00",
+          "end-time": "2025-09-26T23:30:00",
+          "image": "events/peak.jpg",
+          "players": ["Noss", "Hearties", "Meteor", "Stratos", "Fell", "Plasma"]
+      },
+      {
+          "title": "< Stratos > Elder Scrolls V: Skyrim (Modded)",
+          "description": "Did someone say CHALLENGE RUN?",
+          "start-time": "2025-09-27T00:00:00",
+          "end-time": "2025-09-27T06:00:00",
+          "image": "events/skyrim.jpg",
+          "players": ["Stratos"]
+      },
+      {
+          "title": "Piko Park 1",
+          "description": "Big head = Big brain",
+          "start-time": "2025-09-27T16:00:00",
+          "end-time": "2025-09-27T23:30:00",
+          "image": "events/pico.jpg",
+          "players": ["Noss", "Hearties", "Darth", "Stratos", "Fell", "Mega"]
+      },
+      {
+          "title": "< Hearties & Meteor > A Way Out",
+          "description": "2LIFERS went to jail... now what?",
+          "start-time": "2025-09-28T00:00:00",
+          "end-time": "2025-09-28T06:00:00",
+          "image": "events/wayout.jpg",
+          "players": ["Hearties", "Meteor"]
+      },
+      {
+          "title": "Hollow Knight (Modded Multiplayer)",
+          "description": "Budget Silksong",
+          "start-time": "2025-09-28T12:00:00",
+          "end-time": "2025-09-28T17:00:00",
+          "image": "events/hollowknight.jpg",
+          "players": ["Noss", "Stratos", "Mega", "Fell", "Midnight", "Darth"]
+      },
+      {
+          "title": "PEAK",
+          "description": "Chibi takes (another) flight on Bing Bong airlines",
+          "start-time": "2025-09-28T17:00:00",
+          "end-time": "2025-09-28T23:30:00",
+          "image": "events/peak.jpg",
+          "players": ["Noss", "Hearties", "Midnight", "Meteor", "Darth", "Stratos", "Fell"]
+      },
+      {
+          "title": "< Darth > Night Stream",
+          "description": "Darth is streamsitting!",
+          "start-time": "2025-09-29T00:00:00",
+          "end-time": "2025-09-29T06:00:00",
+          "image": "events/darth.png",
+          "players": ["Darth"]
+      },
+      {
+          "title": "Piko Park 2",
+          "description": "Ender of friendships",
+          "start-time": "2025-09-29T18:00:00",
+          "end-time": "2025-09-29T21:00:00",
+          "image": "events/pico2.jpg",
+          "players": ["Noss", "Hearties", "Meteor", "Darth", "Stratos", "Fell", "Mega", "Plasma"]
+      },
+      {
+          "title": "< Meteor > Night Stream",
+          "description": "Meteor is streamsitting!",
+          "start-time": "2025-09-30T00:00:00",
+          "end-time": "2025-09-30T06:00:00",
+          "image": "events/meteor.png",
+          "players": ["Meteor"]
+      },
+      {
+          "title": "Raft",
+          "description": "Chibi lost at sea aboard the S.S. nobberin time",
+          "start-time": "2025-09-30T17:00:00",
+          "end-time": "2025-09-30T20:00:00",
+          "image": "events/raft.jpg",
+          "players": ["Noss", "Midnight", "Meteor", "Stratos", "Fell"]
+      },
+      {
+          "title": "ART",
+          "description": "Solo stream with Chibi",
+          "start-time": "2025-10-01T19:00:00",
+          "end-time": "2025-10-01T23:30:00",
+          "image": "events/3dibi-head.jpg"
+      },
+      {
+          "title": "Danganronpa 2: Goodbye Despair",
+          "description": "Stupid stupid stupid!!!",
+          "start-time": "2025-10-02T18:00:00",
+          "end-time": "2025-10-02T23:30:00",
+          "image": "events/ronpa.jpg",
+          "players": ["Noss", "Hearties", "Meteor"]
+      },
+      {
+          "title": "WitchSpring R: The Follower's Fall (Epilogue)",
+          "description": "It's Pieberry!! (And Black Joe)",
+          "start-time": "2025-10-03T12:00:00",
+          "end-time": "2025-10-03T23:30:00",
+          "image": "events/witch.jpg"
+      },
+      {
+          "title": "< Stratos > Elder Scrolls V: Skyrim (Modded)",
+          "description": "Did someone say MORE CHALLENGE RUN??",
+          "start-time": "2025-10-04T00:00:00",
+          "end-time": "2025-10-04T06:00:00",
+          "image": "events/skyrim.jpg",
+          "players": ["Stratos"]
+      },
+      {
+          "title": "Archipelago",
+          "description": "Cross-game rando, session 2!",
+          "start-time": "2025-10-04T16:00:00",
+          "end-time": "2025-10-04T23:30:00",
+          "image": "events/arch.jpg",
+          "players": ["Noss", "Hearties", "Midnight", "Darth", "Stratos", "Ember", "Fell", "Plasma"]
+      },
+      {
+          "title": "< Hearties & Meteor > A Way Out",
+          "description": "Tune in next time...on 'A Way Out'...!",
+          "start-time": "2025-10-05T00:00:00",
+          "end-time": "2025-10-05T06:00:00",
+          "image": "events/wayout.jpg",
+          "players": ["Hearties", "Meteor"]
+      },
+      {
+          "title": "Ho-oh Nanoblock Build",
+          "description": "The Nobathon continues!",
+          "start-time": "2025-10-05T19:00:00",
+          "end-time": "2025-10-05T23:30:00",
+          "image": "events/3dibi-head.jpg"
+      },
+      {
+          "title": "< Darth > Night Stream",
+          "description": "Darth is streamsitting!",
+          "start-time": "2025-10-06T00:00:00",
+          "end-time": "2025-10-06T06:00:00",
+          "image": "events/darth.png",
+          "players": ["Darth"]
+      },
+      {
+          "title": "Piko Park 2 FINALE",
+          "description": "8 player finish",
+          "start-time": "2025-10-06T18:00:00",
+          "end-time": "2025-10-06T21:00:00",
+          "image": "events/pico2.jpg",
+          "players": ["Noss", "Hearties", "Meteor", "Stratos", "Fell", "Mega", "Plasma", "Lune"]
+      },
+      {
+          "title": "< Meteor > Night Stream",
+          "description": "Meteor is streamsitting!",
+          "start-time": "2025-10-07T00:00:00",
+          "end-time": "2025-10-07T06:00:00",
+          "image": "events/meteor.png",
+          "players": ["Meteor"]
+      },
+      {
+          "title": "Sudoku",
+          "description": "Sponsor stream",
+          "start-time": "2025-10-07T19:00:00",
+          "end-time": "2025-10-07T23:30:00",
+          "image": "events/3dibi-head.jpg"
+      },
+      {
+          "title": "Just Chatting with Chibi",
+          "description": "The Nobathon continues!",
+          "start-time": "2025-10-08T19:00:00",
+          "end-time": "2025-10-08T23:30:00",
+          "image": "events/3dibi-head.jpg"
+      },
+      {
+          "title": "Danganronpa 2: Goodbye Despair",
+          "description": "ALL RISE!",
+          "start-time": "2025-10-09T18:00:00",
+          "end-time": "2025-10-09T23:30:00",
+          "image": "events/ronpa.jpg",
+          "players": ["Noss", "Hearties", "Meteor"]
+      },
+      {
+          "title": "Hollow Knight: Silksong",
+          "description": "A buggy game",
+          "start-time": "2025-10-10T12:00:00",
+          "end-time": "2025-10-10T23:30:00",
+          "image": "events/skong.jpg"
+      },
+      {
+          "title": "< Hearties > (Solitaire) Ghost Trick",
+          "description": "Hearties is streamsitting!",
+          "start-time": "2025-10-11T00:00:00",
+          "end-time": "2025-10-11T06:00:00",
+          "image": "events/meteor.png",
+          "players": ["Hearties"]
+      },
+      {
+          "title": "Hollow Knight: Silksong",
+          "description": "Big world, small chibi",
+          "start-time": "2025-10-11T12:00:00",
+          "end-time": "2025-10-11T23:30:00",
+          "image": "events/skong.jpg"
+      },
+      {
+          "title": "< Hearties & Meteor > Shadow Generations",
+          "description": "Those DAMN Chaos Emeralds",
+          "start-time": "2025-10-12T00:00:00",
+          "end-time": "2025-10-12T06:00:00",
+          "image": "events/meteor.png",
+          "players": ["Hearties", "Meteor"]
+      },
+      {
+          "title": "Hollow Knight: Silksong",
+          "description": "Not addicted",
+          "start-time": "2025-10-12T19:00:00",
+          "end-time": "2025-10-12T23:30:00",
+          "image": "events/skong.jpg"
+      },
+      {
+          "title": "Hollow Knight: Silksong",
+          "description": "Skong",
+          "start-time": "2025-10-13T19:00:00",
+          "end-time": "2025-10-13T23:30:00",
+          "image": "events/skong.jpg"
+      },
+      {
+          "title": "< Meteor > Night Stream",
+          "description": "Meteor is streamsitting!",
+          "start-time": "2025-10-14T00:00:00",
+          "end-time": "2025-10-14T06:00:00",
+          "image": "events/meteor.png",
+          "players": ["Meteor"]
+      },
+      {
+          "title": "Art & Nobathon Scheduling",
+          "description": "The Nobathon continues!",
+          "start-time": "2025-10-14T19:00:00",
+          "end-time": "2025-10-14T23:30:00",
+          "image": "events/3dibi-head.jpg"
+      },
+      {
+          "title": "Blue Protocol",
+          "description": "New MMO",
+          "start-time": "2025-10-15T18:00:00",
+          "end-time": "2025-10-15T23:30:00",
+          "image": "events/3dibi-head.jpg",
+          "players": ["Noss", "Hearties", "Meteor"]
+      },
+      {
+          "title": "Danganronpa 2: Goodbye Despair",
+          "description": "Goodbye paradise!",
+          "start-time": "2025-10-16T18:00:00",
+          "end-time": "2025-10-16T23:30:00",
+          "image": "events/ronpa.jpg",
+          "players": ["Noss", "Hearties", "Meteor"]
+      },
+      {
+          "title": "Pokémon Legends: Z-A",
+          "description": "Release day, release stream!",
+          "start-time": "2025-10-16T12:00:00",
+          "end-time": "2025-10-16T23:30:00",
+          "image": "events/pokemon.jpg"
+      },
+      {
+          "title": "< Mega > Night Stream",
+          "description": "Mega is streamsitting!",
+          "start-time": "2025-10-17T00:00:00",
+          "end-time": "2025-10-17T06:00:00",
+          "image": "events/3dibi-head.jpg"
+      },
+      {
+          "title": "Pokémon Legends: Z-A",
+          "description": "Pokemon battle royale",
+          "start-time": "2025-10-17T12:00:00",
+          "end-time": "2025-10-17T23:30:00",
+          "image": "events/pokemon.jpg"
+      },
+      {
+          "title": "< Hearties > Ghost Trick",
+          "description": "The ghost story continues...",
+          "start-time": "2025-10-18T00:00:00",
+          "end-time": "2025-10-18T06:00:00",
+          "image": "events/meteor.png",
+          "players": ["Hearties"]
+      },
+      {
+          "title": "Pokémon Legends: Z-A",
+          "description": "Pokemon Paris",
+          "start-time": "2025-10-18T12:00:00",
+          "end-time": "2025-10-18T23:30:00",
+          "image": "events/pokemon.jpg"
+      },
+      {
+          "title": "< Hearties & Meteor > Shadow Generations",
+          "description": "You're not me-!",
+          "start-time": "2025-10-19T00:00:00",
+          "end-time": "2025-10-19T06:00:00",
+          "image": "events/meteor.png",
+          "players": ["Hearties", "Meteor"]
+      },
+      {
+          "title": "< Stratos > Elder Scrolls V: Skyrim (Modded)",
+          "description": "Did someone say MORE CHALLENGE RUN??",
+          "start-time": "2025-10-25T00:00:00",
+          "end-time": "2025-10-25T06:00:00",
+          "image": "events/skyrim.jpg",
+          "players": ["Stratos"]
+      }
+  ]
 }
