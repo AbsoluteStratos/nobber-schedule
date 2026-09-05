@@ -716,7 +716,14 @@ main {
 .swiper-pagination {
   position: relative !important;
   inset: auto !important;
-  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin-inline: auto;
 }
 
 .swiper-pagination-bullet {
