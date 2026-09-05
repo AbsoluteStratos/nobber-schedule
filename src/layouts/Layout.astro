@@ -2,7 +2,8 @@
 import bgImg from '../assets/quilt.jpg';
 import bgImgDark from '../assets/dquilt.jpg';
 const icon_img = "nobbers.png"
-const embed_img = "embed.jpg"
+const pageUrl = new URL(import.meta.env.BASE_URL, Astro.site).href;
+const embedUrl = new URL("embed.jpg", pageUrl).href;
 ---
 <!doctype html>
 <html lang="en">
@@ -15,15 +16,15 @@ const embed_img = "embed.jpg"
     <!-- OpenGraph Tags -->
     <meta property="og:title" content="Nobathon 2025 - Schedule">
     <meta property="og:description" content="Nobathon stream event and game schedule">
-    <meta property="og:image" content="https://schedule.nobbers.tv/embed.jpg">
-    <meta property="og:url" content="https://schedule.nobbers.tv/">
+    <meta property="og:image" content={embedUrl}>
+    <meta property="og:url" content={pageUrl}>
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Tags (Optional, but recommended for broader compatibility) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nobathon 2025 - Schedule">
     <meta name="twitter:description" content="Nobathon stream event and game schedule">
-    <meta name="twitter:image" content="https://schedule.nobbers.tv/embed.jpg">
+    <meta name="twitter:image" content={embedUrl}>
 
     <!-- Discord Theme Color -->
     <!-- <meta name="theme-color" content="#FF0000"> -->
