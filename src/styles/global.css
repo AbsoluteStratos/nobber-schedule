@@ -249,7 +249,7 @@ main {
   text-wrap: balance;
   -webkit-user-select: none;
   user-select: none;
-  background: linear-gradient(115deg, var(--color-hero-1) 12%, var(--color-hero-2) 47%, var(--color-hero-3) 78%, var(--color-hero-4) 100%);
+  background: linear-gradient(115deg, var(--color-hero-1) 0%, var(--color-hero-2) 42%, var(--color-hero-3) 72%, var(--color-hero-4) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
