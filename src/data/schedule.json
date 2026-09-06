@@ -30,20 +30,6 @@
   ],
   "events": [
     {
-      "title": "Past Test Event",
-      "description": "TODO: Delete",
-      "start-time": "2026-09-04T12:00:00",
-      "end-time": "2026-09-04T18:00:00",
-      "image": "events/unknown.svg"
-    },
-    {
-      "title": "Test Event",
-      "description": "TODO: Delete",
-      "start-time": "2026-09-05T12:00:00",
-      "end-time": "2026-09-05T18:00:00",
-      "image": "events/unknown.svg"
-    },
-    {
       "title": "Pokemon D&D: Elysium",
       "description": "Episode 9 — Battle Tower",
       "start-time": "2026-09-10T18:00:00",
