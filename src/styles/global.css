@@ -1148,7 +1148,7 @@ main {
   border: 1px solid var(--color-cloud-line);
   border-radius: 18px;
   color: var(--color-cloud-text);
-  background: var(--color-cloud-card);
+  background: color-mix(in srgb, var(--color-cloud-highlight) 72%, var(--color-cloud-card));
   box-shadow: 0 16px 42px color-mix(in srgb, var(--color-cloud-shadow) 42%, transparent), inset 0 1px var(--color-cloud-highlight);
   text-align: left;
   text-decoration: none;
