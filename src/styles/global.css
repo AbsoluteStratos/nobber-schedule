@@ -1345,6 +1345,12 @@ main {
   to { transform: translate3d(0, -11px, 0) rotate(calc(var(--float-phase) + var(--float-swing, 1.8deg))); }
 }
 
+@media (max-width: 1400px) {
+  .footer-decor .floating-decoration:first-of-type {
+    left: 16px;
+  }
+}
+
 @media (max-width: 719px) {
   .sky-scene,
   .floating-decoration,
