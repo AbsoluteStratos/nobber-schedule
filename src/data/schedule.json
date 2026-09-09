@@ -202,7 +202,7 @@
         "image": "decorations/chibi_sleep_4.webp",
         "alt": "",
         "side": "left",
-        "offset": "3%",
+        "offset": "-2%",
         "size": "clamp(96px, 12vw, 176px)",
         "duration": "8.6s",
         "delay": "-0.7s"
