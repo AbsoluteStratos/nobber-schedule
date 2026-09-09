@@ -1110,6 +1110,7 @@ main {
   z-index: 1;
   display: grid;
   place-content: center;
+  justify-items: center;
   min-height: 285px;
   padding: 54px 160px 76px;
   overflow: hidden;
@@ -1122,13 +1123,22 @@ main {
 .site-footer p {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  max-width: 100%;
   margin: 0;
+  padding-left: 0.2em;
   color: var(--color-cloud-text);
   font-size: clamp(.76rem, 1.6vw, .95rem);
   font-weight: 850;
   letter-spacing: .2em;
   line-height: 1.7;
+}
+
+.footer-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  width: min(440px, calc(100vw - 44px));
 }
 
 .footer-schedule-link {
@@ -1138,8 +1148,8 @@ main {
   grid-template-columns: 1fr auto;
   align-items: center;
   column-gap: 14px;
-  width: min(440px, calc(100vw - 44px));
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 15px 17px 15px 20px;
   border: 1px solid var(--color-cloud-line);
   border-radius: 18px;
@@ -1229,7 +1239,7 @@ main {
   stroke-linejoin: round;
 }
 
-.site-footer > span {
+.footer-copy > span {
   position: relative;
   z-index: 2;
   margin-top: 14px;
@@ -1254,8 +1264,9 @@ main {
 
 .footer-archive-row {
   position: relative;
-  width: min(1180px, calc(100% - 40px));
-  margin: 34px auto 0;
+  z-index: 1;
+  width: min(440px, calc(100vw - 44px));
+  margin: 18px auto 0;
 }
 
 .footer-decor {
@@ -1285,7 +1296,7 @@ main {
 .footer-decor .floating-decoration {
   top: 50%;
   bottom: auto;
-  margin-top: calc(var(--float-size) / -2);
+  margin-top: calc(var(--float-size) / -2 + 14px);
 }
 
 .floating-decoration--left { left: var(--float-offset); }

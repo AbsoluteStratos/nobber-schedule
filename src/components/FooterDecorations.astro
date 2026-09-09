@@ -34,8 +34,10 @@ const decorationStyle = (item: Decoration, index: number) =>
     <span class="sky-star sky-star--cross" style="--star-x:73%;--star-y:44%;--star-size:12px;--star-delay:-5.1s"></span>
     <span class="sky-star sky-star--cross" style="--star-x:86%;--star-y:16%;--star-size:13px;--star-delay:-3.3s"></span>
   </div>
-  <p>{message}</p>
-  <span>All times automatically shown in your local time zone.</span>
+  <div class="footer-copy">
+    <p>{message}</p>
+    <span>All times automatically shown in your local time zone.</span>
+  </div>
   <div class="footer-archive-row">
     <div class="footer-decor">
       {sideDecorations.map((item, index) => (
