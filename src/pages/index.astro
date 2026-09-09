@@ -12,6 +12,10 @@ const twitchUrl = schedule['social-links'].find((social) => social.icon === 'twi
 const faviconUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/icon.png`;
 const archiveUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/2025/`;
 const chibiUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/decorations/chibi_sleep.webp`;
+const toolbarChibi = footer['floating-images'][1];
+const toolbarChibiUrl = toolbarChibi
+  ? `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${toolbarChibi.image.replace(/^\//, '')}`
+  : '';
 ---
 
 <!doctype html>
@@ -42,7 +46,20 @@ const chibiUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/decorations/chi
     <div class="page-glow page-glow--two" aria-hidden="true"></div>
     <SkyScene />
     <div class="noise" aria-hidden="true"></div>
-    <MerchModal merch={schedule.merch} socials={schedule['social-links']} />
+    <div class="floating-tools-stack">
+      {toolbarChibi && (
+        <img
+          class="floating-decoration floating-decoration--toolbar"
+          src={toolbarChibiUrl}
+          alt=""
+          width="160"
+          height="160"
+          aria-hidden="true"
+          style={`--float-size:${toolbarChibi.size};--float-duration:${toolbarChibi.duration};--float-delay:${toolbarChibi.delay};--float-phase:0deg;--float-swing:0.25deg`}
+        />
+      )}
+      <MerchModal merch={schedule.merch} socials={schedule['social-links']} />
+    </div>
 
     <main>
       <header class="hero">

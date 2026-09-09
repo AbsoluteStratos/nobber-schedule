@@ -19,28 +19,43 @@ interface Props {
 const { message, decorations, linkLabel, linkHref } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 const assetUrl = (path: string) => `${baseUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+const sideDecorations = decorations.filter((_, index) => index !== 1);
+const decorationStyle = (item: Decoration, index: number) =>
+  `--float-offset:${item.offset};--float-size:${item.size};--float-duration:${item.duration};--float-delay:${item.delay};--float-phase:${[-11, 0, -4][index] ?? 0}deg;--float-swing:${index === 1 ? '0.25deg' : '1.6deg'}`;
 ---
 
 <footer class="site-footer">
   <div class="footer-orbit" aria-hidden="true"></div>
-  {decorations.map((item, index) => (
-    <img
-      class={`floating-decoration floating-decoration--${item.side}`}
-      src={assetUrl(item.image)}
-      alt={item.alt}
-      width="160"
-      height="160"
-      loading="lazy"
-      style={`--float-offset:${item.offset};--float-size:${item.size};--float-duration:${item.duration};--float-delay:${item.delay};--float-phase:${index * 7}deg`}
-    />
-  ))}
+  <div class="footer-stars" aria-hidden="true">
+    <span class="sky-star sky-star--cross" style="--star-x:6%;--star-y:41%;--star-size:11px;--star-delay:-2.7s"></span>
+    <span class="sky-star sky-star--cross" style="--star-x:22%;--star-y:9%;--star-size:14px;--star-delay:-0.9s"></span>
+    <span class="sky-star sky-star--cross" style="--star-x:35%;--star-y:47%;--star-size:10px;--star-delay:-4.2s"></span>
+    <span class="sky-star sky-star--cross" style="--star-x:64%;--star-y:26%;--star-size:15px;--star-delay:-1.8s"></span>
+    <span class="sky-star sky-star--cross" style="--star-x:73%;--star-y:44%;--star-size:12px;--star-delay:-5.1s"></span>
+    <span class="sky-star sky-star--cross" style="--star-x:86%;--star-y:16%;--star-size:13px;--star-delay:-3.3s"></span>
+  </div>
   <p>{message}</p>
   <span>All times automatically shown in your local time zone.</span>
-  {linkLabel && linkHref && (
-    <a class="footer-schedule-link" href={linkHref}>
-      <span>Schedule archive</span>
-      <strong>{linkLabel}</strong>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg>
-    </a>
-  )}
+  <div class="footer-archive-row">
+    <div class="footer-decor">
+      {sideDecorations.map((item, index) => (
+        <img
+          class={`floating-decoration floating-decoration--${item.side}`}
+          src={assetUrl(item.image)}
+          alt={item.alt}
+          width="160"
+          height="160"
+          loading="lazy"
+          style={decorationStyle(item, index === 0 ? 0 : 2)}
+        />
+      ))}
+    </div>
+    {linkLabel && linkHref && (
+      <a class="footer-schedule-link" href={linkHref}>
+        <span>Schedule archive</span>
+        <strong>{linkLabel}</strong>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg>
+      </a>
+    )}
+  </div>
 </footer>
