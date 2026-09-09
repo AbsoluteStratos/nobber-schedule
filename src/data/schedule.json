@@ -63,7 +63,7 @@
       "title": "Pico Park 2",
       "description": "The picos need parking",
       "start-time": "2026-09-11T17:00:00",
-      "end-time": "2026-09-11T11:00:00",
+      "end-time": "2026-09-11T23:00:00",
       "image": "events/pico2.jpg",
       "players": ["Noss", "Meteor", "Hearties", "Darth", "Plasma", "Fell", "Radio", "Stratos"]
     },
