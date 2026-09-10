@@ -53,7 +53,7 @@
       "players": ["Darth"]
     },
     {
-      "title": "Filler & Merch Reveal",
+      "title": "Filler & Merch Showing",
       "description": "TBD",
       "start-time": "2026-09-11T06:00:00",
       "end-time": "2026-09-11T17:00:00",
@@ -65,7 +65,7 @@
       "start-time": "2026-09-11T17:00:00",
       "end-time": "2026-09-11T23:00:00",
       "image": "events/pico2.jpg",
-      "players": ["Noss", "Meteor", "Hearties", "Darth", "Plasma", "Fell", "Radio", "Stratos"]
+      "players": ["Noss", "Meteor", "Hearties", "Darth", "Plasma", "Lemon", "Radio", "Stratos"]
     },
     {
       "title": "Stratos Stream",
@@ -88,7 +88,7 @@
       "start-time": "2026-09-12T11:00:00",
       "end-time": "2026-09-12T12:00:00",
       "image": "events/silksong_setup.webp",
-      "players": ["Noss", "Midnight", "Lemon", "Darth", "Fell", "Stratos"]
+      "players": ["Noss", "Midnight", "Lemon", "Darth", "Stratos"]
     },
     {
       "title": "Silksong Multiplayer",
@@ -96,7 +96,7 @@
       "start-time": "2026-09-12T12:00:00",
       "end-time": "2026-09-12T20:00:00",
       "image": "events/silksong.webp",
-      "players": ["Noss", "Midnight", "Lemon", "Darth", "Fell", "Stratos"]
+      "players": ["Noss", "Midnight", "Lemon", "Darth", "Stratos"]
     },
     {
       "title": "Filler",
@@ -133,7 +133,7 @@
       "start-time": "2026-09-13T11:00:00",
       "end-time": "2026-09-13T12:00:00",
       "image": "events/arch.jpg",
-      "players": ["Noss", "Meteor", "Hearties", "Midnight", "Lemon", "Darth", "Fell", "Lune", "Kigo", "Stratos"]
+      "players": ["Noss", "Meteor", "Hearties", "Midnight", "Lemon", "Darth", "Lune", "Kigo", "Stratos"]
     },
     {
       "title": "Archipelago",
@@ -141,7 +141,7 @@
       "start-time": "2026-09-13T12:00:00",
       "end-time": "2026-09-13T18:00:00",
       "image": "events/arch.jpg",
-      "players": ["Noss", "Meteor", "Hearties", "Midnight", "Lemon", "Darth", "Fell", "Lune", "Kigo", "Stratos"]
+      "players": ["Noss", "Meteor", "Hearties", "Midnight", "Lemon", "Darth", "Lune", "Kigo", "Stratos"]
     },
     {
       "title": "Break",
@@ -156,7 +156,7 @@
       "start-time": "2026-09-13T19:00:00",
       "end-time": "2026-09-13T23:00:00",
       "image": "events/pico2.jpg",
-      "players": ["Noss", "Meteor", "Hearties", "Darth", "Lune", "Fell", "Radio", "Stratos"]
+      "players": ["Noss", "Meteor", "Hearties", "Darth", "Lune", "Lemon", "Radio", "Stratos"]
     },
     {
       "title": "Rune Factory: Guardians of Azuma",
@@ -193,6 +193,13 @@
       "end-time": "2026-09-17T23:00:00",
       "image": "events/palworld.webp",
       "players": ["Noss", "Meteor", "Hearties"]
+    },
+    {
+      "title": "The End?",
+      "description": "TBD",
+      "start-time": "2026-09-17T23:00:00",
+      "end-time": "2026-09-18T0:00:00",
+      "image": "events/filler2.webp"
     }
   ],
   "footer": {
