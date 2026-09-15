@@ -73,7 +73,7 @@
       "start-time": "2026-09-11T23:30:00",
       "end-time": "2026-09-12T01:30:00",
       "image": "events/phasmo.webp",
-      "players": ["Stratos"]
+      "players": ["Stratos, Darth"]
     },
     {
       "title": "Stratos Skyrim Stream",
@@ -121,12 +121,12 @@
       "image": "events/karoke.webp"
     },
     {
-      "title": "Hearties Nightstream",
+      "title": "Hearties Nightstream Board Game",
       "description": "Hearties has the overnight.",
       "start-time": "2026-09-13T00:00:00",
       "end-time": "2026-09-13T06:00:00",
       "image": "events/hearties.webp",
-      "players": ["Hearties"]
+      "players": ["Hearties, Meteor"]
     },
     {
       "title": "Filler",
@@ -195,9 +195,17 @@
       "image": "events/filler3.webp"
     },
     {
+      "title": "Pokemon D&D: Elysium",
+      "description": "Episode 10 — Battle Tower Finals",
+      "start-time": "2026-09-17T18:00:00",
+      "end-time": "2026-09-17T20:00:00",
+      "image": "events/dnd2.webp",
+      "players": ["Noss", "Meteor", "Hearties"]
+    },
+    {
       "title": "Deltarune",
       "description": "Not pokemon.",
-      "start-time": "2026-09-17T18:00:00",
+      "start-time": "2026-09-17T20:00:00",
       "end-time": "2026-09-17T23:00:00",
       "image": "events/palworld.webp",
       "players": ["Noss", "Meteor", "Hearties"]
